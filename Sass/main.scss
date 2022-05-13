@@ -1,0 +1,162 @@
+@import './layout/background';
+@import './layout/form';
+@import './layout/identitypic';
+@import './base/typographie';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/variables';
+@import './components/progressbar';
+
+// BACKGROUND
+.bg {
+  position: fixed; 
+  height: 100vh;
+  width: 100%;
+  // ADD opacity on the background image
+  &:before {
+    content: "";
+    background-image: url('../assets/grotte.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.03;
+  }
+}
+
+// Format the whole grid of the CV
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-auto-rows: auto;
+  margin: 0 80px;
+  text-align: justify;
+  column-gap: 20px;
+  &__c1 {
+    background: $middleblue;
+    color: $whitefontcolor;
+    padding: 20px 40px 20px 40px;
+  }
+  &__c2 {
+    padding: 20px;
+    color: $darkbluefontcolor;
+    &__flex {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      div {
+        padding: 0;
+      }
+    } 
+  }
+  &__realisation {
+    padding-top: 0;
+  }
+  &--titre {
+    padding-top: 40px;
+  }
+  &--flex-center {
+    justify-content: center;
+  }
+  &--border-bottom {
+    border-bottom: $darkbluefontcolor solid 1px;
+  }
+  &--flex-center,
+  &__c2.grid--titre {
+    display: flex;
+    align-items: center;
+  }
+} 
+
+@media screen and (max-width: 1524px) {
+  .grid {
+    grid-template-columns: 240px 1fr;
+    margin: 0 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .grid {
+    grid-template-columns: 200px 1fr;
+    margin: 0 40px;
+    &__c1,
+    &__c2 {
+      padding: 20px;
+    }
+  }
+  .pic {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    font-size: 0.8rem;
+  }
+  h5 {
+    font-size: 1.6em;
+  }
+  .grid {
+    grid-template-columns: 160px 1fr;
+    margin: 0 10px;
+    &__c1,
+    &__c2 {
+      padding: 15px;
+    }
+  }
+  .pic {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  ul {
+    padding-inline-start: 0px;
+  }
+  .grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    margin: 0 10px;
+    text-align: justify;
+    &__c1,
+    &__c2 {
+      padding: 10px 10px;
+    }
+    &__c1 {
+      background-color: transparent;
+      color: $darkbluefontcolor;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        margin: 0;
+        font-size: 1.3em;
+      }
+      p {
+        margin: 0;
+        font-size: 1.17em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+    }
+    &--titre {
+      display: flex;
+      justify-content: center;
+    }
+    &__c2.grid--titre {
+      justify-content: left;
+    }
+  }
+  .pic,
+  .delPhone {
+    display: none;
+  }
+}
