@@ -256,8 +256,9 @@ li {
     margin: 0;
   }
 
-  #Profil {
-    padding: 10px;
+  #Profil,
+#Hobbies {
+    padding: 20px 10px 10px 10px;
   }
 
   .grid {
