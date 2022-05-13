@@ -123,7 +123,7 @@ li {
   height: 100vh;
   width: 100%;
 }
-.bg:before {
+.bg::before {
   content: "";
   background-image: url("../assets/grotte.jpg");
   background-position: center;
@@ -256,6 +256,10 @@ li {
     margin: 0;
   }
 
+  #Profil {
+    padding: 10px;
+  }
+
   .grid {
     position: relative;
     display: grid;
@@ -267,8 +271,14 @@ li {
   .grid .language {
     grid-template-columns: 1fr;
   }
-  .grid__c1, .grid__c2 {
-    padding: 10px 10px;
+  .grid__c1 {
+    padding: 25px 10px 0px 10px;
+  }
+  .grid__c2 {
+    padding: 5px 10px 5px 10px;
+  }
+  .grid__c2__grid {
+    padding: 0;
   }
   .grid__c1 {
     background-color: transparent;
@@ -295,9 +305,28 @@ li {
   .grid__c2.grid--titre {
     justify-content: left;
   }
+  .grid__realisation {
+    padding: 2px 10px;
+  }
 
   .pic,
 .delPhone {
     display: none;
+  }
+
+  .clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+  .clamp p {
+    padding: 0;
+  }
+  .clamp:hover {
+    display: block;
+  }
+  .clamp:hover p {
+    padding-bottom: 7px;
   }
 }/*# sourceMappingURL=main.css.map */
