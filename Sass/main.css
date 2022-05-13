@@ -6,14 +6,14 @@ body {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 h2 {
-  margin: 0.4rem auto;
-  font-size: 1.7rem;
+  margin: 0.5rem auto;
+  font-size: 2rem;
 }
 
 h3 {
@@ -21,7 +21,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 h5 {
@@ -37,8 +37,11 @@ p {
 
 ul {
   list-style-type: none;
+  -webkit-margin-before: 1.5rem;
+          margin-block-start: 1.5rem;
 }
-ul li {
+
+li {
   margin: 10px 0;
 }
 
@@ -152,13 +155,23 @@ ul li {
   padding: 20px;
   color: #020343;
 }
-.grid__c2__flex {
+.grid__c2__grid {
   padding: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: ". ." "bottom bottom";
+  margin: 0;
 }
-.grid__c2__flex div {
+.grid__c2__grid--bottom {
+  grid-area: bottom;
+}
+.grid__c2__grid div {
   padding: 0;
+}
+.grid__c2__grid--left {
+  text-align: left;
+}
+.grid__c2__grid ul {
+  text-align: right;
 }
 .grid__realisation {
   padding-top: 0;
@@ -227,6 +240,22 @@ ul li {
             padding-inline-start: 0px;
   }
 
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+  }
+
+  li {
+    margin: 0;
+  }
+
   .grid {
     position: relative;
     display: grid;
@@ -234,6 +263,9 @@ ul li {
     grid-auto-rows: auto;
     margin: 0 10px;
     text-align: justify;
+  }
+  .grid .language {
+    grid-template-columns: 1fr;
   }
   .grid__c1, .grid__c2 {
     padding: 10px 10px;
