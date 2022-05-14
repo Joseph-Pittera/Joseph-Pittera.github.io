@@ -219,7 +219,7 @@ li {
   }
 
   h5 {
-    font-size: 1.6em;
+    font-size: 1.3rem;
   }
 
   .grid {
@@ -289,11 +289,11 @@ li {
   }
   .grid__c1 h3 {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
   .grid__c1 p {
     margin: 0;
-    font-size: 1.17em;
+    font-size: 1.1rem;
     -webkit-margin-start: 0px;
             margin-inline-start: 0px;
     -webkit-margin-end: 0px;

@@ -47,7 +47,6 @@
     &__grid {
       padding: 1.5rem 0;
       display: grid;
-      // grid-template-columns: 1fr 1fr;
       &--bottom {
         grid-area: bottom;
       }
@@ -114,7 +113,7 @@
     font-size: 0.8rem;
   }
   h5 {
-    font-size: 1.6em;
+    font-size: 1.3rem;
   }
   .grid {
     grid-template-columns: 160px 1fr;
@@ -175,11 +174,11 @@
       justify-content: space-between;
       h3 {
         margin: 0;
-        font-size: 1.3em;
+        font-size: 1.3rem;
       }
       p {
         margin: 0;
-        font-size: 1.17em;
+        font-size: 1.1rem;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
       }
