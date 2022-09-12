@@ -52,7 +52,8 @@ a {
   align-items: center;
   justify-content: flex-end;
   position: fixed;
-  box-shadow: 0 2px 2px rgb(0 0 0  / 50%);;
+  box-shadow: 0 2px 2px rgb(0 0 0  / 50%);
+  z-index: 1;
 }
 
 #navbar-links {
@@ -90,12 +91,13 @@ a {
 .CV {
   margin: 0 auto;
   position: relative;
-  top: 100px;
+  top: 60px;
 }
 
 .CV > img {
   width: 200px;
   border-radius: 50%;
+  z-index: -1;
 }
 
 
@@ -131,6 +133,7 @@ a {
   border-radius: 5px;
   max-width: 350px;
   margin: 1rem;
+  box-shadow: 0 0 45px rgb(0 0 0 / 30%);
 }
 
 .project-tile > p {
@@ -140,6 +143,7 @@ a {
 
 .project-tile:hover {
   background-color: var(--main-gray);
+  box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
 }
 
 .project-tile > img {
