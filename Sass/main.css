@@ -50,6 +50,7 @@ li {
   transform: translate(0, 0) scale(1);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all 0.1s ease-in-out;
+  height: 180px;
   cursor: pointer;
 }
 .pic:active {
@@ -200,7 +201,6 @@ li {
   body {
     font-size: 0.9rem;
   }
-
   .grid {
     grid-template-columns: 200px 1fr;
     margin: 0 40px;
@@ -208,7 +208,6 @@ li {
   .grid__c1, .grid__c2 {
     padding: 20px;
   }
-
   .pic {
     height: 140px;
   }
@@ -217,11 +216,9 @@ li {
   body {
     font-size: 0.8rem;
   }
-
   h5 {
     font-size: 1.3rem;
   }
-
   .grid {
     grid-template-columns: 160px 1fr;
     margin: 0 10px;
@@ -229,7 +226,6 @@ li {
   .grid__c1, .grid__c2 {
     padding: 15px;
   }
-
   .pic {
     height: 120px;
   }
@@ -239,28 +235,22 @@ li {
     -webkit-padding-start: 0px;
             padding-inline-start: 0px;
   }
-
   h1 {
     font-size: 2.2rem;
   }
-
   h2 {
     font-size: 1.5rem;
   }
-
   h4 {
     font-size: 0.8rem;
   }
-
   li {
     margin: 0;
   }
-
   #Profil,
 #Hobbies {
     padding: 20px 10px 10px 10px;
   }
-
   .grid {
     position: relative;
     display: grid;
@@ -309,12 +299,10 @@ li {
   .grid__realisation {
     padding: 2px 10px;
   }
-
   .pic,
 .delPhone {
     display: none;
   }
-
   .clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;

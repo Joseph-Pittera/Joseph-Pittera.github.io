@@ -4,8 +4,9 @@
     transform: translate(0, 0) scale(1);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all 0.1s ease-in-out;
+    height: 180px;
     cursor: pointer;
-    &:active {
+    &:active   {
       transform: translate(38vw, 35vh) scale(2);
     }
     &:hover {
