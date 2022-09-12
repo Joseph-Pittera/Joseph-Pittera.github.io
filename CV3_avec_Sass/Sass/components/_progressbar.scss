@@ -1,0 +1,37 @@
+// manage the progress bars animation 
+.language {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 230px 1fr;
+    &:hover {
+      .language__bar--FR::after {
+        transform: scale(1, 1);
+      }
+      .language__bar--EN::after {
+        transform: scale(0.85, 1);
+      }
+      .language__bar--DE::after {
+        transform: scale(0.6, 1);
+      }
+    }
+    &__bar--FR,
+    &__bar--EN,
+    &__bar--DE {
+      @include loadbar($lightgrey);
+    }
+    &__bar--FR {
+      &::after {
+        @include loadbarperc(FR);
+      }
+    }
+    &__bar--EN {
+      &::after {
+        @include loadbarperc(EN);
+      }
+    }
+    &__bar--DE {
+      &::after {
+        @include loadbarperc(DE);
+      }
+    }
+  }

@@ -7,7 +7,7 @@
 }
 
 :root {
-  --main-white: #f0f0f0;
+  --main-white: rgb(240, 240, 240);
   --main-red: rgb(97, 1, 1);
   --light-red: #be3144;
   --main-blue: #45567d;
@@ -87,6 +87,17 @@ a {
   font-weight: 400;
 }
 
+.CV {
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+}
+
+.CV > img {
+  width: 200px;
+  border-radius: 50%;
+}
+
 
 /* project section */
 
@@ -96,7 +107,7 @@ a {
   min-height: 100vh;
   text-align: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgb(45 49 101),rgb(0 23 85)) ;
+  background: linear-gradient(to right, rgb(45 60 101),rgb(0 23 85)) ;
 }
 
 .projects-header {
@@ -200,6 +211,7 @@ footer {
 @media (max-width: 680px) {
   h1 {
     font-size: 3rem;
+    margin: 10px 20px;
   }
   p {
     font-size: 20px;
@@ -217,20 +229,27 @@ footer {
   /* project section */
   .projects-header {
     font-size: 2rem;
-    margin: 3rem auto;
+    margin: 1rem auto;
+    padding: 10px;
   }
   .project-tile {
     max-width: 300px;
   }
   .project-tile > p {
     font-size: 1rem;
+    padding: 8px;
   }
   
   /* contact section */
+  .contact-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
   .contact-details {
     font-size: 1.2rem;
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.1s ease-out;
+    padding: 5px;
   }
 
   /* footer */

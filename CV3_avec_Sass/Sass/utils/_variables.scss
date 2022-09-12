@@ -1,0 +1,16 @@
+// VARIABLES
+$veryclearblue:rgb(155 179 206 / 30%);
+$middleblue: rgb(79 124 160);
+$darkbluefontcolor:#020343;
+$whitefontcolor: #e3e3f9;
+$darkboxshadow: darken($middleblue, 20%);
+$primary-color: tomato;
+$lightgrey: #eeeeee;
+$middledarkblue1: #02398bcc;
+$middledarkblue2: lighten($middledarkblue1,10%);
+$middledarkblue3: lighten($middledarkblue1,20%);
+$progressbarcolor: (
+  FR: $middledarkblue1,
+  EN: $middledarkblue2,
+  DE: $middledarkblue3,
+);
