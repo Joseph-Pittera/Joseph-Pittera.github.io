@@ -142,7 +142,7 @@ a {
 }
 
 .project-tile:hover {
-  background-color: var(--main-gray);
+  /* background-color: var(--main-gray); */
   box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
 }
 
