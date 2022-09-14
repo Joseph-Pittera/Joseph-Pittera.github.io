@@ -1,0 +1,180 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Lato', Helvetica, sans-serif;
+  background: linear-gradient(to right, #eee, #ece6e6);
+  padding: 20px 10px 10px;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right, #eee, #ece6e6);
+  font-weight: 400;
+  width: 100%;
+  align-items: center;
+  min-height: 75px;
+}
+
+#header-img {
+  width: 100%;
+  height: 100%;
+  max-height: 50px;
+  max-width: 300px;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+
+a {
+  text-decoration:none;
+  cursor: pointer;
+  color: black;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type : none;
+  text-align: center;
+}
+
+li {
+  display : inline-block;
+  padding: 0.2rem 1rem;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 9rem 0 1.5rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 6rem;
+  margin-bottom: 2rem;
+}
+
+#email {
+  padding: 4px;
+  min-width: 250px;
+  border-radius: 3px;
+
+}
+
+#submit {
+  background-color: gold;
+  font-weight: 900;
+  font-size: large;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+#submit:hover {
+  background-color: rgb(244, 184, 22);
+  cursor: pointer;
+}
+
+#features {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa {
+  color: darkorange;
+  display: none;
+}
+
+.Description {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.Description h2 {
+  margin: 0.5rem 0;
+}
+
+#video-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+.product {
+  border: 1px solid;
+  margin: 0.5rem auto;
+  text-align: center;
+  border-radius: 2px;
+  width: 300px;
+}
+
+h3 {
+  background-color: rgb(211, 210, 210);
+  padding: 1rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.price {
+  padding: 1rem 0;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+p {
+  padding: 0.5rem 0;
+}
+
+button {
+  background-color: gold;
+  border-radius: 3px;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: rgb(244, 184, 22);
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type : none;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #header-img {
+    margin: 0;
+  }
+}

@@ -1,0 +1,254 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-white: #f0f0f0;
+  --main-red: rgb(97, 1, 1);
+  --light-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: rgb(48, 45, 45);
+  --main-black:rgb(34, 31, 31);
+}
+
+body {
+  min-height: 100vh;
+  font-family:  'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h1, h2, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-white);
+}
+
+p {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);;
+}
+
+
+/* navbar */
+
+#navbar {
+  height: 66px;
+  width: 100%;
+  background-color: var(--main-red);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  box-shadow: 0 2px 2px rgb(0 0 0  / 50%);;
+}
+
+#navbar-links {
+  padding-right: 10px;
+}
+
+#navbar-links > a {
+  font-size: 1.4rem;
+  padding: 18px;
+}
+
+#navbar-links > a:hover {
+  background-color: var(--main-gray);
+}
+
+
+/* Welcome section */
+
+#welcome-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, var(--main-gray), var(--main-black)) ;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#welcome-section > p {
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.CV {
+  font-size: 35px;
+  padding-top: 8rem;
+}
+
+
+/* project section */
+
+#projects {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(45 60 101),rgb(0 23 85)) ;
+}
+
+.projects-header {
+  font-size: 2.3rem;
+  font-weight: 700;
+  border-bottom: solid 1px;
+  line-height: 1.5;
+  max-width: 544px;
+  margin: 4rem auto;
+}
+
+.project-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+
+.project-tile {
+  background-color: var(--main-black);
+  border-radius: 5px;
+  max-width: 350px;
+  margin: 1rem;
+}
+
+.project-tile > p {
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.project-tile:hover {
+  background-color: var(--main-gray);
+}
+
+.project-tile > img {
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: calc(100% - 56px);
+}
+
+.code {
+  color: var(--main-black);
+  font-weight: 900;
+}
+
+.project-tile:hover .code {
+  color: var(--light-red);
+}
+
+
+/* contact section */
+
+#contact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #db8404, #bc7000) ;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.contact-details {
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.1s ease-out;
+  padding: 18px;
+}
+
+.contact-details:hover {
+  transform: scale(1.1);
+}
+
+
+/* footer */
+
+footer {
+  color: var(--main-white);
+  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70)) ;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 1rem;
+  border-top: solid 3px var(--main-red);
+  height: 70px;
+  font-size: 0.9rem;
+}
+
+
+
+/* media queries */
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 3rem;
+    margin: 10px 20px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  /* navbar */
+  #navbar {
+    height: 46px;
+  }
+  #navbar-links > a {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  /* project section */
+  .projects-header {
+    font-size: 2rem;
+    margin: 1rem auto;
+    padding: 10px;
+  }
+  .project-tile {
+    max-width: 300px;
+  }
+  .project-tile > p {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+  /* contact section */
+  .contact-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .contact-details {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.1s ease-out;
+    padding: 5px;
+  }
+
+  /* footer */
+  footer {
+    height: 50px;
+    font-size: 0.8rem;
+  }
+}

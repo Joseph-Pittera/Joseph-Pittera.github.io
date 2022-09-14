@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <img
+          id="header-img"
+          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png"
+          alt="landing page logo"
+        />
+        <ul>
+          <li><a class="nav-link" href="#submit">Features</a></li>
+          <li><a class="nav-link" href="#video-link">How It Works</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Handcrafted, home-made masterpieces</h1>
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email address"
+        name="email"
+        required
+      />
+      <input type="submit" id="submit" value="GET STARTED" />
+    </form>
+    <section id="features">
+      <i class="fa fa-3x fa-fire"></i>
+      <div class="Material">
+        <div class="Description">
+          <h2>Premium Materials</h2>
+          <p>
+            Our trombones use the shiniest brass which is sourced locally. This
+            will increase the longevity of your purchase.
+          </p>
+        </div>
+      </div>
+      <i class="fa fa-3x fa-truck"></i>
+      <div class="Shipping">
+        <div class="Description">
+          <h2>Fast Shipping</h2>
+          <p>
+            We make sure you recieve your trombone as soon as we have finished
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+      </div>
+      <i class="fa fa-3x fa-battery-full"></i>
+      <div class="Assurance">
+        <div class="Description">
+          <h2>Quality Assurance</h2>
+          <p id="video-link">
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will check and test the pitch of your instrument.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="video-section">
+      <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0"
+      ></iframe>
+    </section>
+    <section id="pricing">
+      <div class="product">
+        <h3>TENOR TROMBONE</h3>
+        <p class="price">$600</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+
+        <button>SELECT</button>
+      </div>
+      <div class="product">
+        <h3>BASS TROMBONE</h3>
+        <p class="price">$900</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <button>SELECT</button>
+      </div>
+      <div class="product">
+        <h3>VALVE TROMBONE</h3>
+        <p class="price">$1200</p>
+        <p>Plays similar to a Trumpet</p>
+        <p>Great for Jazz Bands</p>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum.</p>
+        <button>SELECT</button>
+      </div>
+    </section>
+  </body>
+</html>

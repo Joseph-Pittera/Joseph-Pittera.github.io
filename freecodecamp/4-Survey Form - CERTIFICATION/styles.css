@@ -1,0 +1,75 @@
+body {
+    margin: auto;
+    background-color: rgb(0 10 104 / 77%);
+    font-family: 'Poppins', sans-serif;
+    color: #f3f3f3;
+    font-size: 1.1rem;
+}
+
+header {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+form {
+    background-color: rgba(0, 0, 26, 0.671);
+    padding: 2.5rem;
+    min-width: 300px;
+    max-width: 700px;
+    width: 60vw;
+    margin: auto;
+    border-radius: 0.25rem;
+}
+
+form div:not(:first-child) {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+textarea, select, input[type=text], input[type=number], input[type=email] { 
+    width: 100%;
+    margin: 0.4rem 0 0 0;
+    display: block;
+    padding: 0.275rem 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+textarea {
+    padding: 0.5rem;
+    resize: vertical;
+    height: 200px;
+}
+
+label, .radio {
+    display: flex;
+    align-items: center;
+}
+
+input[type=radio], input[type=checkbox]  {
+    margin: 10px 10px 10px 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+button {
+    margin: auto;
+    background-color: #37af65;
+    color: white;
+    border-radius: 0.25rem;
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border: #37af65;
+    display: block;
+}
+
+div label:first-of-type {
+    font-weight: bold;
+}
