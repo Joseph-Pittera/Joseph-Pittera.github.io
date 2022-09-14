@@ -12,20 +12,22 @@
   --light-red: #be3144;
   --main-blue: #45567d;
   --main-gray: rgb(48, 45, 45);
-  --main-black:rgb(34, 31, 31);
+  --light-gray: rgb(115, 110, 110);
+  --main-black: rgb(34, 31, 31);
 }
 
 body {
   min-height: 100vh;
   font-family:  'Poppins', sans-serif;
+  overflow: overlay; 
 }
 
 body::-webkit-scrollbar {
-  width: 10px; /* width of the entire scrollbar */
+  width: 8px; /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: grey;
+  background-color: var(--light-gray);
   border-radius: 5px;
 }
 
