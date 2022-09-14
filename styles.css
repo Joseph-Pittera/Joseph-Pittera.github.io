@@ -41,8 +41,7 @@ a {
 }
 
 
-/* navbar */
-
+/********* navbar ************/
 #navbar {
   height: 66px;
   width: 100%;
@@ -70,8 +69,7 @@ a {
 }
 
 
-/* Welcome section */
-
+/************ Welcome section ***************/
 #welcome-section {
   display: flex;
   width: 100%;
@@ -88,21 +86,16 @@ a {
   font-weight: 400;
 }
 
-.CV {
+#welcome-section > img {
   margin: 0 auto;
   position: relative;
   top: 60px;
-}
-
-.CV > img {
   width: 200px;
   border-radius: 50%;
-  z-index: -1;
 }
 
 
-/* project section */
-
+/************* project section ****************/
 #projects {
   display: flex;
   width: 100%;
@@ -163,8 +156,7 @@ a {
 }
 
 
-/* contact section */
-
+/******** contact section **************/
 #contact {
   display: flex;
   width: 100%;
@@ -202,7 +194,7 @@ footer {
   display: flex;
   justify-content: right;
   align-items: center;
-  padding-right: 1rem;
+  padding: 1rem;
   border-top: solid 3px var(--main-red);
   height: 70px;
   font-size: 0.9rem;
@@ -223,17 +215,17 @@ footer {
 
   /* navbar */
   #navbar {
-    height: 46px;
+    height: 40px;
   }
   #navbar-links > a {
     font-size: 1rem;
-    padding: 12px;
+    padding: 9px;
   }
 
   /* project section */
   .projects-header {
     font-size: 2rem;
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 10px;
   }
   .project-tile {
