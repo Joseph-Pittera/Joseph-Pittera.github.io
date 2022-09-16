@@ -14,6 +14,7 @@
   --light-gray: rgb(115, 110, 110);
   --main-black: rgb(34, 31, 31);
   --height-navbar: 68px;
+  --height-navbar-mobile: 40px;
 }
 body {
   min-height: 100vh;
@@ -102,7 +103,7 @@ a {
   -webkit-text-stroke: 0vw var(--main-white);
   border-right: 2px solid var(--main-white);
   overflow: hidden;
-  animation: appear-to-right 10s linear forwards;
+  animation: appear-to-right 8s linear forwards;
 }
 @keyframes appear-to-right {
   0%,10% {
@@ -120,13 +121,13 @@ a {
   color: var(--light-red);
   font-style: italic;
   font-weight: 400;
-  animation: appear 10s linear forwards;
+  animation: appear 8s linear forwards;
 }
 @keyframes appear {
   0%,50% {
     transform: scale(0);
   }
-  60%,100% {
+  55% {
     transform: scale(1);
   }
 }
@@ -249,6 +250,12 @@ footer {
 
 
 /* media queries */
+@media (max-width: 760px) {
+  .project-tile {
+    width: 280px;
+    height: 280px;
+  }
+}
 @media (max-width: 680px) {
   h1 {
     font-size: 3rem;
@@ -257,31 +264,35 @@ footer {
   p {
     font-size: 20px;
   }
-
-  /* navbar */
+  /**** navbar ****/
   #navbar {
-    height: 40px;
+    height: var(--height-navbar-mobile);
   }
   #navbar-links > a {
     font-size: 1rem;
     padding: 9px;
   }
-
-  /* project section */
+  /**** project section ****/
+  #carre {
+    bottom: var(--height-navbar-mobile);
+  }
   .projects-header {
-    font-size: 2rem;
-    margin: 2rem auto;
+    font-size: 1.8rem;
+    margin: 1.8rem auto;
     padding: 10px;
   }
+  .project-flexbox {
+    flex-direction: column;
+  }
   .project-tile {
-    max-width: 300px;
+    width: 240px;
+    height: 240px;
   }
   .project-tile > p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 8px;
   }
-  
-  /* contact section */
+  /**** contact section ****/
   .contact-links {
     flex-direction: column;
     margin-top: 10px;
@@ -292,8 +303,7 @@ footer {
     transition: transform 0.1s ease-out;
     padding: 5px;
   }
-
-  /* footer */
+  /**** footer ****/
   footer {
     height: 50px;
     font-size: 0.8rem;
