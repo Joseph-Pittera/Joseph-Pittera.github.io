@@ -103,13 +103,13 @@ a {
   -webkit-text-stroke: 0vw var(--main-white);
   border-right: 2px solid var(--main-white);
   overflow: hidden;
-  animation: appear-to-right 8s linear forwards;
+  animation: appear-to-right 4s linear forwards;
 }
 @keyframes appear-to-right {
   0%,10% {
     width: 0;
   }
-  30%,100% {
+  60%,100% {
     width: 100%;
   }
   100% {
@@ -121,13 +121,13 @@ a {
   color: var(--light-red);
   font-style: italic;
   font-weight: 400;
-  animation: appear 8s linear forwards;
+  animation: appear 4s linear forwards;
 }
 @keyframes appear {
-  0%,30% {
+  0%,60% {
     transform: scale(0);
   }
-  35% {
+  65% {
     transform: scale(1);
   }
 }
@@ -175,7 +175,6 @@ a {
   justify-content: space-evenly;
   align-items: center;
   margin: 1rem;
-  max-height: 80vh;
 }
 .project-tile {
   background-color: var(--main-black);
@@ -254,13 +253,10 @@ footer {
 
 
 /* media queries */
-@media (max-width: 760px) {
-  .project-flexbox {
-    max-height: 80vh;
-  }
+@media screen and (max-width: 760px) {
   .project-tile {
-    min-width: 220px;
-    min-height: 220px;
+    min-width: 280px;
+    min-height: 280px;
     width: 40vw;
     height: 40vw;
   }
@@ -270,10 +266,6 @@ footer {
   }
 }
 @media screen and (max-width: 680px) {
-  #welcome-section > h1 {
-    font-size: 3rem;
-    margin: 10px 20px;
-  }
   /**** navbar ****/
   #navbar {
     height: var(--height-navbar-mobile);
@@ -281,14 +273,31 @@ footer {
   #navbar-links > a {
     padding: 15px;
   }
+  /**** welcome section ****/
+  #welcome-section > h1 {
+    font-size: 2.6rem;
+    margin: 10px 20px;
+  }
   /**** project section ****/
   #carre {
     bottom: var(--height-navbar-mobile);
   }
   .projects-header {
     font-size: 1.8rem;
-    margin: 1.8rem auto;
+    margin: 1.5rem auto;
     padding: 10px;
+  }
+  .project-flexbox {
+    flex-direction: column;
+    max-height: 80%;
+    margin-top: 0;
+  }
+  .project-tile {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 10px;
   }
   /**** contact section ****/
   .contact-links {
@@ -311,9 +320,41 @@ footer {
     font-size: 0.8rem;
   }
 }
-@media screen {
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  /**** navbar ****/
+  #navbar {
+    height: var(--height-navbar-mobile);
+  }
+  #navbar-links > a {
+    padding: 15px;
+  }  /**** welcome section ****/
+  #welcome-section > h1 {
+    font-size: 2.4rem;
+    margin: 10px 20px;
+  }
+  #CV-icon {
+    top: 20px;
+    width: 160px;
+  }
+  /**** project section ****/
+  #carre {
+    bottom: var(--height-navbar-mobile);
+  }
+  .projects-header {
+    font-size: 1.8rem;
+    margin: 1.5rem auto;
+    padding: 10px;
+  }
+  .project-flexbox {
+    flex-direction: column;
+    max-height: 80%;
+    margin-top: 0;
+  }
   .project-tile {
-    min-width: 280px;
-    min-height: 280px;
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 70vh;
+    max-height: 70vh;
+    margin: 0;
   }
 }
