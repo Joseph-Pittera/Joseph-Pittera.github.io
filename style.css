@@ -41,7 +41,12 @@ a {
   text-decoration: none;
   color: var(--main-white);;
 }
-
+ul {
+  list-style-type: none;
+}
+li {
+  display: inline;
+}
 
 /********* navbar ************/
 #navbar {
@@ -49,22 +54,32 @@ a {
   width: 100%;
   background-color: var(--main-red);
   margin-top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   position: fixed;
   box-shadow: 0 2px 2px rgb(0 0 0  / 50%);
   z-index: 1;
 }
 #navbar-links {
-  padding-right: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
 }
-#navbar-links > a {
+#navbar-links > li {
+  height: 100%;
+  padding: 0 20px;
   font-size: 1.4rem;
-  padding: 19px;
+  display: flex;
+
 }
-#navbar-links > a:hover {
-  background-color: var(--main-gray);
+@media (hover: hover) {
+  #navbar-links > li:hover {
+    background-color: var(--main-gray);
+  }
+}
+#navbar-links  a {
+  margin: auto;
 }
 
 /************ Welcome section ***************/
@@ -124,10 +139,10 @@ a {
   animation: appear 4s linear forwards;
 }
 @keyframes appear {
-  0%,60% {
+  0%,65% {
     transform: scale(0);
   }
-  65% {
+  75% {
     transform: scale(1);
   }
 }
@@ -185,10 +200,6 @@ a {
   box-shadow: 0 0 45px rgb(0 0 0 / 50%);
   transition: transform 0.2s ease-in-out;
 }
-.project-tile:hover {
-  box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
-  transform: scale(1.1);
-}
 .project-title {
   font-size: 1.2rem;
   padding: 5px;
@@ -203,10 +214,15 @@ a {
   color: var(--main-black);
   font-weight: 900;
 }
-.project-tile:hover .code {
-  color: var(--light-red);
+@media (hover: hover) {
+  .project-tile:hover {
+    box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
+    transform: scale(1.1);
+  }
+  .project-tile:hover .code {
+    color: var(--light-red);
+  }
 }
-
 
 /******** contact section **************/
 #contact {
@@ -233,8 +249,10 @@ a {
   transition: transform 0.1s ease-out;
   padding: 18px;
 }
-.contact-details:hover {
-  transform: scale(1.1);
+@media (hover: hover) {
+  .contact-details:hover {
+    transform: scale(1.1);
+  }
 }
 
 
@@ -254,15 +272,15 @@ footer {
 
 /* media queries */
 @media screen and (max-width: 760px) {
+  .project-title {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
   .project-tile {
     min-width: 280px;
     min-height: 280px;
     width: 40vw;
     height: 40vw;
-  }
-  .project-title {
-    font-size: 0.9rem;
-    padding: 8px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -270,8 +288,9 @@ footer {
   #navbar {
     height: var(--height-navbar-mobile);
   }
-  #navbar-links > a {
-    padding: 15px;
+  #navbar-links > li {
+    font-size: 1.2rem;
+    padding: 0 10px;
   }
   /**** welcome section ****/
   #welcome-section > h1 {
