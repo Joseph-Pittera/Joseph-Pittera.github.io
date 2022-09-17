@@ -14,7 +14,7 @@
   --light-gray: rgb(115, 110, 110);
   --main-black: rgb(34, 31, 31);
   --height-navbar: 68px;
-  --height-navbar-mobile: 40px;
+  --height-navbar-mobile: 60px;
 }
 body {
   min-height: 100vh;
@@ -218,6 +218,9 @@ a {
   flex-direction: column;
   background: linear-gradient(to right, #db8404, #bc7000) ;
 }
+.contact-header {
+  font-size: 2rem;
+}
 .contact-links {
   display: flex;
   align-items: center;
@@ -250,26 +253,23 @@ footer {
 
 
 /* media queries */
-@media (max-width: 760px) {
+@media screen and (max-width: 760px) {
   .project-tile {
     width: 280px;
     height: 280px;
   }
 }
-@media (max-width: 680px) {
-  h1 {
+@media screen and (max-width: 680px) {
+  #welcome-section > h1 {
     font-size: 3rem;
     margin: 10px 20px;
-  }
-  p {
-    font-size: 20px;
   }
   /**** navbar ****/
   #navbar {
     height: var(--height-navbar-mobile);
   }
   #navbar-links > a {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding: 9px;
   }
   /**** project section ****/
@@ -285,8 +285,8 @@ footer {
     flex-direction: column;
   }
   .project-tile {
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
   }
   .project-tile > p {
     font-size: 0.9rem;
@@ -297,8 +297,11 @@ footer {
     flex-direction: column;
     margin-top: 10px;
   }
+  .contact-header {
+    margin-bottom: 2rem;
+  }
   .contact-details {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.1s ease-out;
     padding: 5px;
