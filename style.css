@@ -311,3 +311,8 @@ footer {
     font-size: 0.8rem;
   }
 }
+@media screen {
+  .project-tile {
+    min-width: 280px;
+    min-height: 280px;
+}
