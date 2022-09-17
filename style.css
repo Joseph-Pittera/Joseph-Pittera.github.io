@@ -109,7 +109,7 @@ a {
   0%,10% {
     width: 0;
   }
-  50%,100% {
+  30%,100% {
     width: 100%;
   }
   100% {
@@ -124,10 +124,10 @@ a {
   animation: appear 8s linear forwards;
 }
 @keyframes appear {
-  0%,50% {
+  0%,30% {
     transform: scale(0);
   }
-  55% {
+  35% {
     transform: scale(1);
   }
 }
@@ -315,4 +315,5 @@ footer {
   .project-tile {
     min-width: 280px;
     min-height: 280px;
+  }
 }
