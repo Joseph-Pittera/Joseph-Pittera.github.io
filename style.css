@@ -55,7 +55,7 @@ li {
   background-color: var(--main-red);
   margin-top: 0;
   position: fixed;
-  box-shadow: 0 2px 2px rgb(0 0 0  / 50%);
+  box-shadow: 0 2px 5px rgb(0 0 0  / 50%);
   transition: 0.3s;
   z-index: 1;
 }
@@ -69,17 +69,37 @@ li {
 }
 #navbar-links > li {
   height: 100%;
-  padding: 0 20px;
   font-size: 1.4rem;
   display: flex;
 }
-@media (hover: hover) {
-  #navbar-links > li:hover {
-    background-color: var(--main-gray);
-  }
-}
 #navbar-links a {
+  padding: 0 20px;
   line-height: var(--height-navbar);
+  position: relative;
+  transition: color 0.3s;
+}
+/* Trick to avoid using "transition: background-color" */
+/* that is using "paint" css function which is time consuming */
+#navbar-links a::after {
+  content: ""; /* to not forget if no text nor image !!! */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-gray);
+  opacity: 0;
+  z-index: -1;
+  color: var(--main-red);
+  transition: opacity 0.3s;
+}
+@media (hover: hover) {
+  #navbar-links a:hover::after {
+    opacity: 1;
+  }
+  #navbar-links a:hover {
+    color: var(--light-red);
+  }
 }
 
 /************ Welcome section ***************/
@@ -107,7 +127,7 @@ li {
   padding-right: 2px;
 }
 #welcome-section > h1::before {
-  content : attr(data-text);
+  content : attr(data-text); /* to not forget !!! */
   position: absolute;
   top: 0;
   left: 0;
@@ -159,7 +179,7 @@ li {
   0%,50% {
     opacity: 0;
   }
-  85% {
+  80% {
     transform: opacity(1);
   }
 }
