@@ -12,6 +12,7 @@
   --main-blue: #45567d;
   --main-gray: rgb(48, 45, 45);
   --light-gray: rgb(115, 110, 110);
+  --dark-gray: rgb(37, 34, 34);
   --main-black: rgb(34, 31, 31);
   --height-navbar: 50px;
   --height-navbar-mobile: 50px;
@@ -87,7 +88,7 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(--main-gray);
+  background: radial-gradient(circle, var(--main-gray) 0%, var(--main-black) 100%);/* var(--main-gray); */
   opacity: 0;
   z-index: -1;
   color: var(--main-red);
@@ -404,3 +405,4 @@ footer {
     margin: 0;
   }
 }
+
