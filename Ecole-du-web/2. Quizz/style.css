@@ -1,0 +1,92 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Open sans, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: clamp(20px, 5vw, 50px) 20px;
+}
+
+form {
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  font-weight: 700;
+}
+
+form > div {
+  background-color: #f1f1f1;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+  padding: 20px 20px;
+}
+
+div p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+div div {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+div div:nth-child(2) {
+  margin-top: 20px;
+}
+
+div label, input[type=radio] {
+  cursor: pointer;
+}
+
+input[type=radio] {
+  height: 20px;
+  width: 20px;
+}
+
+div label {
+  margin-left: 0.8rem;
+}
+
+button {
+  width: 220px;
+  border: none;
+  border-radius: 5px;
+  box-shadow:  0 2px 5px rgb(0, 0, 0, 0.3);
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 10px;
+  display: block;
+  margin: auto;
+}
+
+.result-container {
+  background-color: #fff;
+}
+
+.result-container p {
+  text-align: center;
+  margin: 0;
+}

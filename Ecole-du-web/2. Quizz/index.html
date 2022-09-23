@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1><span class="bold">Quizz </span>Culture générale. ✅</h1>
+    <form class="global-container">
+      <div>
+        <p>Qui est sacré empereur de France le 2 décembre 1804 ?</p>
+        <div>
+          <input type="radio" id="Clovis" name="Q1" value="a" checked />
+          <label for="Clovis">Clovis</label>
+        </div>
+        <div>
+          <input type="radio" id="Lincoln" name="Q1" value="b" unchecked />
+          <label for="Lincoln">Abraham Lincoln</label>
+        </div>
+        <div>
+          <input type="radio" id="Bonaparte" name="Q1" value="c" unchecked />
+          <label for="Bonaparte">Napoleon Bonaparte</label>
+        </div>
+      </div>
+      <div>
+        <p>
+          Quand la déclaration d’indépendance des Etats-Unis a-t-elle été votée
+          ?
+        </p>
+        <div>
+          <input type="radio" id="d1" name="Q2" value="a" checked />
+          <label for="d1"> 4 juillet 1776</label>
+        </div>
+        <div>
+          <input type="radio" id="d2" name="Q2" value="b" unchecked />
+          <label for="d2">18 avril 1856</label>
+        </div>
+        <div>
+          <input type="radio" id="d3" name="Q2" value="c" unchecked />
+          <label for="d3"> 30 juin 1925</label>
+        </div>
+      </div>
+      <div>
+        <p>Quand a eu lieu la chute de l’empire romain d'occident ?</p>
+        <div>
+          <input type="radio" id="r1" name="Q3" value="a" checked />
+          <label for="r1">15 ap. J.-C.</label>
+        </div>
+        <div>
+          <input type="radio" id="r2" name="Q3" value="b" unchecked />
+          <label for="r2"> 476 ap. J.-C.</label>
+        </div>
+        <div>
+          <input type="radio" id="r3" name="Q3" value="c" unchecked />
+          <label for="r3">-740 av. J.-C.</label>
+        </div>
+      </div>
+      <div>
+        <p>Quelle est la capitale de la Slovénie ?</p>
+        <div>
+          <input type="radio" id="Ljubljana" name="Q4" value="a" checked />
+          <label for="Ljubljana">Ljubljana</label>
+        </div>
+        <div>
+          <input type="radio" id="Belgrade" name="Q4" value="b" unchecked />
+          <label for="Belgrade">Belgrade</label>
+        </div>
+        <div>
+          <input type="radio" id="Bratislava" name="Q4" value="c" unchecked />
+          <label for="Bratislava">Bratislava</label>
+        </div>
+      </div>
+      <div>
+        <p>Combien d'habitants compte l'Irlande en 2020 ?</p>
+        <div>
+          <input type="radio" id="f1" name="Q5" value="a" checked />
+          <label for="f1"> 1,365 Million</label>
+        </div>
+        <div>
+          <input type="radio" id="f2" name="Q5" value="b" unchecked />
+          <label for="f2">21 Millions</label>
+        </div>
+        <div>
+          <input type="radio" id="f3" name="Q5" value="c" unchecked />
+          <label for="f3">4,9 Millions</label>
+        </div>
+      </div>
+      <button>VALIDER ✔️</button>
+      <div class="result-container">
+        <p id="comment1">
+          Cliquez sur <span class="bold">valider</span> pour voir les
+          <span class="bold">résultats</span>
+        </p>
+        <p id="score"></p>
+        <p id="comment2"></p>
+      </div>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
