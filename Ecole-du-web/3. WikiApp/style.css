@@ -1,0 +1,118 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  background: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: clamp(20px, 5vw, 50px) 20px 20px;
+  overflow: overlay; /* make the background of the scrollball "transparent */
+}
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */ 
+  background-color: #f1f1f1;
+  /* display: none; --> to hide the scrollbar*/ 
+}
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+
+
+header img{
+  height: auto;
+  width: clamp(100px, 25vw, 300px);
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+h1 {
+  font-weight: 400;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 4rem;
+}
+h1 > span {
+  font-weight: bold;
+}
+.search-ctn > input {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 5px;
+  border: none;
+  padding: 1.5rem;
+  font-size: 2rem;
+  width: clamp(400px, 75vw, 800px);
+  box-shadow: 0 0 5px 2px rgb(0 0 0 / 20%);
+  border-style: none;
+}
+.search-ctn > input:focus {
+  outline: 1px solid #222222be;
+}
+.error-msg {
+  display: block;
+  margin: 2rem auto;
+  font-size: 2rem;
+  text-align: center;
+}
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: clamp(400px, 75vw, 600px);
+}
+.result-item {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.result-item > h3 {
+  font-size: 2rem;
+}
+.result-item > a {
+  color: green;
+  text-decoration: none;
+}
+.loader {
+  display: none;
+  justify-content: center;
+}
+
+.bar {
+  background-color: rgb(70, 68, 68);
+  height: 38px;
+  width: 6px;
+  margin: 0 1px;
+  animation: load 0.3s ease-in-out infinite alternate;
+}
+.bar:nth-child(2){
+  animation-delay: 0.05s;
+}
+.bar:nth-child(3){
+  animation-delay: 0.1s;
+}
+.bar:nth-child(4){
+  animation-delay: 0.15s;
+}
+.bar:nth-child(5){
+  animation-delay: 0.2s;
+}
+.bar:nth-child(6){
+  animation-delay: 0.25s;
+}
+
+@keyframes load {
+  25%,50% {
+    transform: scaleY(0.2);
+  }
+
+}
