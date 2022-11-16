@@ -1,0 +1,52 @@
+body {
+    min-height: 100vh;
+    font-family: Lato, Helvetica, sans-serif;
+    background: linear-gradient(to right, #f8ebc0, #fde7a0);
+    padding: clamp(20px, 5vw, 50px) 10px 10px;
+    overflow: overlay; /* make the background of the scrollball "transparent */
+}
+body::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */ 
+    background-color: #d1d1d1;
+    /* display: none; --> to hide the scrollbar*/ 
+}
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 5px;
+}
+.bold {
+    font-weight: 700;
+}
+.title, .subtitle {
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+}
+.title {
+    font-size: 6rem;
+}
+.subtitle {
+    font-size: 4rem;
+}
+.articles-section {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    width: 80%;
+}
+.article {
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.article__title {
+    padding: 2rem 2rem 1rem;
+    font-size: 2.5rem;
+}
+.article__description {
+    padding: 1rem 2rem 2rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+}
