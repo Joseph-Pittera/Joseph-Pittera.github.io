@@ -20,7 +20,7 @@
 body {
   min-height: 100vh;
   font-family:  'Poppins', sans-serif;
-  overflow: overlay; 
+  overflow: overlay;
 }
 body::-webkit-scrollbar {
   width: 8px; /* width of the entire scrollbar */
@@ -316,9 +316,12 @@ footer {
   #navbar {
     height: var(--height-navbar-mobile);
   }
+  #navbar-links {
+    justify-content: space-around;
+    padding: 0;
+  }
   #navbar-links > li {
     font-size: 1.2rem;
-    padding: 0 10px;
   }
   /**** welcome section ****/
   #welcome-section > h1 {
@@ -366,6 +369,17 @@ footer {
     height: 50px;
     font-size: 0.8rem;
   }
+}
+@media screen and (max-width:500px) {
+  #navbar-links li {
+    width: 25%;
+  }
+  #navbar-links a {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
 }
 @media screen and (orientation: landscape) and (max-height: 600px) {
   /**** navbar ****/

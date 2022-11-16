@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies en JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="form">
+      <h1 class="form__title">
+        Création de <span class="bold">Cookies</span> 🍪
+      </h1>
+      <label for="name" class="nameLbl"
+        >Son nom
+        <input
+          type="text"
+          class="nameInput"
+          id="name"
+          name="name"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <label for="value" class="valueLbl"
+        >Sa valeur
+        <input
+          type="text"
+          class="valueInput"
+          id="value"
+          name="value"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <div class="form__buttons">
+        <button class="btn" type="submit">Créer</button>
+        <button class="btn displayCookiesBtn" type="button">Afficher</button>
+      </div>
+    </form>
+    <p class="info-txt"></p>
+    <ul class="cookies-list"></ul>
+    <div class="toast-ctn"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    font-family: Lato, sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff); 
+    padding: clamp(20px, 5vw, 50px) 20px 10px;
+}
+
+.bold {
+    font-weight: 800;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 50rem;
+    margin: auto;
+}
+.form__title {
+    margin: 1rem auto;
+    font-weight: 300;
+    font-size: 3rem;
+    font-family: Raleway;
+    text-align: center;
+}
+.nameLbl, .valueLbl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+.nameInput, .valueInput {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow: 0 0.3rem 0.3rem rgb(0 0 0 / 20%);
+}
+.nameInput:focus, .valueInput:focus {
+    outline: 1px solid gray;
+}
+.form__buttons {
+    margin: auto;
+}
+.btn {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 400;
+    padding: 1rem;
+    width: 8rem;
+    background-color: #006C67;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: #008079;
+}
+.toast-ctn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+.toast {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    color: white;
+}
+.cookies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    max-width: 50rem;
+}
+.cookie {
+    position: relative;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    width: 45%;
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow: 0 0.3rem 0.3rem rgb(0 0 0 / 20%);
+    font-size: 1.5rem;
+}
+.info-txt {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.delete {
+    position: absolute;
+    padding: 0.3rem 0.5rem;
+    top: 0.3rem;
+    right: 0.3rem;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+ul {
+    list-style-type: none; /* delete ul style (dots) */
+}
+
+@media screen and (max-width: 800px) {
+    .form__title {
+        font-size: 2rem;
+    }
+    .cookie {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .form__title {
+        font-size: 1.5rem;
+    }
+    .nameLbl, .valueLbl {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0.5rem auto;
+    }
+    .nameInput, .valueInput {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    .form__buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn {
+        margin: 0.3rem;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
