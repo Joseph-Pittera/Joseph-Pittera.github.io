@@ -52,3 +52,11 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 0.1rem;
     font-weight: 300;
 }
+@media screen and (max-width:500px) {
+    .olduvai-bg {
+        background-image: none;
+        color: black;
+        height: auto;
+        margin: 1rem 0 4rem;
+    }
+}
