@@ -13,11 +13,8 @@ body::-webkit-scrollbar-thumb {
     background-color: grey;
     border-radius: 5px;
 }
-br {
-    line-height: 40rem;
-}
 .bold {
-    font-weight: 700;
+    font-weight: 500;
 }
 .title, .subtitle {
     text-align: center;
@@ -25,7 +22,7 @@ br {
     padding: 1rem;
 }
 .title {
-    font-size: 6rem;
+    font-size: calc(2rem + 3vw);
     font-family: Lato, sans-serif;
 }
 .subtitle {
@@ -40,6 +37,7 @@ br {
 }
 .article {
     margin: 0.5rem;
+    padding: 0 0.5rem;
     border-radius: 0.5rem;
     background-color: #fafafa;
 }
@@ -48,8 +46,9 @@ br {
     font-size: 2.5rem;
 }
 .article__description {
-    padding: 1rem 2rem 2rem;
+    padding: 0 2rem 2rem;
     font-size: 1.8rem;
     line-height: 2.4rem;
     letter-spacing: 0.1rem;
+    font-weight: 300;
 }
