@@ -46,9 +46,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 2.5rem;
 }
 .article__description {
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 3rem;
     font-size: 1.8rem;
-    line-height: 2.4rem;
+    line-height: 3rem;
     letter-spacing: 0.1rem;
     font-weight: 300;
 }

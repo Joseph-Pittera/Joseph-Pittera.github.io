@@ -1,5 +1,6 @@
 .articles-section {
     margin: 6rem auto;
+    max-width: 102.4rem;
 }
 .article__title {
     font-size: 3rem;
