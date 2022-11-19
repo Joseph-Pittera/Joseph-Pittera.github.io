@@ -203,15 +203,15 @@ li {
   flex-direction: column;
   background: linear-gradient(to right, rgb(45 60 101),rgb(0 23 85)) ;
 }
-.projects-header {
-  font-size: 2.3rem;
+.projects__title {
+  font-size: calc(1.5rem + 3vw);
   font-weight: 700;
   border-bottom: solid 1px;
   line-height: 1.5;
   max-width: 544px;
   margin: 4rem auto 0 auto;
 }
-.project-flexbox {
+.projects__flexbox {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
@@ -219,10 +219,10 @@ li {
   align-items: center;
   margin: 1rem;
 }
-.project-flexbox a {
+.projects__flexbox a {
   color: var(--main-white);
 }
-.project-tile {
+.project__tile {
   background-color: var(--main-black);
   border-radius: 5px;
   width: 320px;
@@ -231,26 +231,26 @@ li {
   box-shadow: 0 0 45px rgb(0 0 0 / 50%);
   transition: transform 0.2s ease-in-out;
 }
-.project-title {
-  font-size: 1.2rem;
-  padding: 5px;
-}
-.project-tile > img {
+.tile__image {
   border-radius: 5px 5px 0 0;
   object-fit: cover;
   width: 100%;
   height: calc(100% - 56px);
+}
+.tile__title {
+  font-size: 1.2rem;
+  padding: 5px;
 }
 .code {
   color: var(--main-black);
   font-weight: 900;
 }
 @media (hover: hover) {
-  .project-tile:hover {
+  .project__tile:hover {
     box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
     transform: scale(1.1);
   }
-  .project-tile:hover .code {
+  .project__tile:hover .code {
     color: var(--light-red);
   }
 }
@@ -264,21 +264,18 @@ li {
 }
 #blog h1, #blog h2 {
   color: #1f1f1f;
-  
+  text-align: center;
+  margin: 1rem;
 }
 .bold {
   font-weight: 700;
 }
-.title, .subtitle {
-  text-align: center;
-  margin: 1rem;
-}
-.title {
-  font-size: 4rem;
+.blog__title {
+  font-size: calc(1.5rem + 3vw);
   font-family: Lato, sans-serif;
 }
-.subtitle {
-  font-size: 2.5rem;
+.blog__subtitle {
+  font-size: calc(1rem + 2vw);
   font-family: Raleway, sans-serif;
 }
 .articles-section {
@@ -358,15 +355,15 @@ footer {
 
 /* media queries */
 @media screen and (max-width: 760px) {
-  .project-title {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-  .project-tile {
+  .project__tile {
     min-width: 280px;
     min-height: 280px;
     width: 40vw;
     height: 40vw;
+  }
+  .tile__title {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -390,17 +387,12 @@ footer {
   #carre {
     bottom: var(--height-navbar-mobile);
   }
-  .projects-header {
-    font-size: 1.8rem;
-    margin: 1.5rem auto;
-    padding: 10px;
-  }
-  .project-flexbox {
+  .project__flexbox {
     flex-direction: column;
     max-height: 80%;
     margin-top: 0;
   }
-  .project-tile {
+  .project__tile {
     min-width: 250px;
     min-height: 250px;
     max-width: 80%;
@@ -431,11 +423,16 @@ footer {
 @media screen and (max-width:500px) {
   #navbar-links li {
     width: 25%;
+    font-size: 1rem;
   }
   #navbar-links a {
     width: 100%;
     margin: auto;
     text-align: center;
+    padding: 0 10px;
+  }
+  #navbar-links a:last-of-type {
+    padding: 0 10px 0 0;
   }
   .title {
     font-size: 2rem;
@@ -480,17 +477,17 @@ footer {
   #carre {
     bottom: var(--height-navbar-mobile);
   }
-  .projects-header {
+  .projects__title {
     font-size: 1.8rem;
     margin: 1.5rem auto;
     padding: 10px;
   }
-  .project-flexbox {
+  .projects__flexbox {
     flex-direction: column;
     max-height: 80%;
     margin-top: 0;
   }
-  .project-tile {
+  .project__tile {
     min-width: 250px;
     min-height: 250px;
     max-width: 70vh;
