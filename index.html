@@ -23,71 +23,72 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <!-- ********************************** NAVBAR ************************************* -->
-    <nav id="navbar">
-      <ul id="navbar-links">
-        <li>
-          <a href="#welcome-section">About </a>
-        </li>
-        <li>
-          <a href="#projects">Projets </a>
-        </li>
-        <li>
-          <a href="#blog">Blog </a>
-        </li>
-        <li>
-          <a href="#contact">Contact </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container">
+      <!-- ********************************** NAVBAR ************************************* -->
+      <nav id="navbar">
+        <ul id="navbar-links">
+          <li>
+            <a href="#welcome-section">About </a>
+          </li>
+          <li>
+            <a href="#projects">Projets </a>
+          </li>
+          <li>
+            <a href="#blog">Blog </a>
+          </li>
+          <li>
+            <a href="#contact">Contact </a>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- ****************************** WELCOME SECTION ******************************** -->
-    <section class="scroll-section">
-      <div id="welcome-section" class="flex">
-        <h1 id="ws-title" data-text="Hey&nbsp;I'm&nbsp;Joseph&nbsp;">
-          Hey I'm Joseph
-        </h1>
-        <p id="ws-presentation">web developer</p>
-        <img id="CV-icon" src="./assets/Photo-CV.jfif" alt="CV icon" />
-      </div>
-      <!-- <div id="carre"></div> -->
-    </section>
-    <!-- ****************************** PROJECT SECTION ******************************** -->
-    <section id="projects" class="scroll-section">
-      <h2 class="projects__title">Mes projets</h2>
-      <div class="projects__flexbox">
-        <a class="project__tile" href="./freecodecamp/index.html">
-          <img
-            src="./assets/freecodecamp.png"
-            alt="freecodecamp-image"
-            class="tile__image"
-          />
-          <p class="tile__title">
-            <span class="code"> &lt;</span>
-            Freecodecamp projects
-            <span class="code">/&gt;</span>
-          </p>
-        </a>
-        <a class="project__tile" href="./Ecole-du-web/index.html">
-          <img
-            src="./assets/ecole-du-web.png"
-            alt="ecole-du-web-logo"
-            class="tile__image"
-          />
-          <p class="tile__title">
-            <span class="code"> &lt;</span>
-            "Ecole du web" projects
-            <span class="code">/&gt;</span>
-          </p>
-        </a>
-      </div>
-    </section>
-    <!-- ****************************** BLOG SECTION *********************************** -->
-    <section class="scroll-section" id="blog">
-      <h1 class="blog__title bold">Mon parcours O'clock</h1>
-      <h2 class="blog__subtitle">Formation développeur JS</h2>
-      <section class="articles-section">
-        <!--       <a href="./Blog/S08/index.html" class="article__link">
+      <!-- ****************************** WELCOME SECTION ******************************** -->
+      <section class="scroll-section">
+        <div id="welcome-section" class="flex">
+          <h1 id="ws-title" data-text="Hey&nbsp;I'm&nbsp;Joseph&nbsp;">
+            Hey I'm Joseph
+          </h1>
+          <p id="ws-presentation">web developer</p>
+          <img id="CV-icon" src="./assets/Photo-CV.jfif" alt="CV icon" />
+        </div>
+        <!-- <div id="carre"></div> -->
+      </section>
+      <!-- ****************************** PROJECT SECTION ******************************** -->
+      <section id="projects" class="scroll-section">
+        <h2 class="projects__title">Mes projets</h2>
+        <div class="projects__flexbox">
+          <a class="project__tile" href="./freecodecamp/index.html">
+            <img
+              src="./assets/freecodecamp.png"
+              alt="freecodecamp-image"
+              class="tile__image"
+            />
+            <p class="tile__title">
+              <span class="code"> &lt;</span>
+              Freecodecamp projects
+              <span class="code">/&gt;</span>
+            </p>
+          </a>
+          <a class="project__tile" href="./Ecole-du-web/index.html">
+            <img
+              src="./assets/ecole-du-web.png"
+              alt="ecole-du-web-logo"
+              class="tile__image"
+            />
+            <p class="tile__title">
+              <span class="code"> &lt;</span>
+              "Ecole du web" projects
+              <span class="code">/&gt;</span>
+            </p>
+          </a>
+        </div>
+      </section>
+      <!-- ****************************** BLOG SECTION *********************************** -->
+      <section class="scroll-section" id="blog">
+        <h1 class="blog__title bold">Mon parcours O'clock</h1>
+        <h2 class="blog__subtitle">Formation développeur JS</h2>
+        <section class="articles-section">
+          <!--       <a href="./Blog/S08/index.html" class="article__link">
           <article class="article">
             <h3 class="article__title bold">Saison 8 : CMS et déploiement</h3>
             <p class="article__description"></p>
@@ -127,76 +128,76 @@
             <p class="article__description"></p>
           </article>
         </a> -->
-        <article class="article">
-          <a href="./Blog/S02/index.html" class="article__link">
-            <h3 class="article__title bold">Saison 2 : JavaScript</h3>
-            <p class="article__description"></p>
-          </a>
-        </article>
-        <article class="article">
-          <a href="./Blog/S01/index.html" class="article__link">
-            <h3 class="article__title bold">Saison 1 : HTML et CSS</h3>
-            <p class="article__description">
-              Les 2 premières semaines sont dédiées à l'intégration : découverte
-              de Linux, de la console et ses lignes de commande, du HTML et CSS,
-              et de l'outil indispensable pour le partage, l'archivage et
-              maintient du code : GitHub.
-            </p>
-          </a>
-        </article>
-        <article class="article">
-          <a href="./Blog/S00/index.html" class="article__link">
-            <h3 class="article__title bold">Saison 0 : Préparation</h3>
-            <p class="article__description">
-              Les 2 semaines précédant la formation sont consacrées au
-              paramétrage de notre environnement de travail : hardware et
-              software.
-            </p>
-          </a>
-        </article>
-        <article class="article">
-          <a href="./Blog/Before/index.html" class="article__link">
-            <h3 class="article__title bold">Avant O'Clock</h3>
-            <p class="article__description">
-              Après 12 ans en Supply Chain dans de grandes entreprises, une
-              lassitute intellectuelle se faisait de plus en plus sentir.
-              L'envie d'un nouveau challenge a pris le dessus !
-            </p>
-          </a>
-        </article>
+          <article class="article">
+            <a href="./Blog/S02/index.html" class="article__link">
+              <h3 class="article__title bold">Saison 2 : JavaScript</h3>
+              <p class="article__description"></p>
+            </a>
+          </article>
+          <article class="article">
+            <a href="./Blog/S01/index.html" class="article__link">
+              <h3 class="article__title bold">Saison 1 : HTML et CSS</h3>
+              <p class="article__description">
+                Les 2 premières semaines sont dédiées à l'intégration :
+                découverte de Linux, de la console et ses lignes de commande, du
+                HTML et CSS, et de l'outil indispensable pour le partage,
+                l'archivage et maintient du code : GitHub.
+              </p>
+            </a>
+          </article>
+          <article class="article">
+            <a href="./Blog/S00/index.html" class="article__link">
+              <h3 class="article__title bold">Saison 0 : Préparation</h3>
+              <p class="article__description">
+                Les 2 semaines précédant la formation sont consacrées au
+                paramétrage de notre environnement de travail : hardware et
+                software.
+              </p>
+            </a>
+          </article>
+          <article class="article">
+            <a href="./Blog/Before/index.html" class="article__link">
+              <h3 class="article__title bold">Avant O'Clock</h3>
+              <p class="article__description">
+                Après 12 ans en Supply Chain dans de grandes entreprises, une
+                lassitute intellectuelle se faisait de plus en plus sentir.
+                L'envie d'un nouveau challenge a pris le dessus !
+              </p>
+            </a>
+          </article>
+        </section>
       </section>
-    </section>
-    <!-- ****************************** CONTACT SECTION ******************************** -->
-    <section id="contact" class="scroll-section">
-      <div class="contact-header">
-        <h1>Let's work together...</h1>
-      </div>
-      <div class="contact-links" id="contact-links">
-        <a
-          id="profile-link"
-          href="https://github.com/Joseph-Pittera"
-          target="_blank"
-          class="contact-details"
-          ><i class="fab fa-github"></i> GitHub</a
-        >
-        <a
-          href="https://www.linkedin.com/in/joseph-pittera-a34a2030/"
-          target="_blank"
-          class="contact-details"
-          ><i class="fab fa-linkedin"></i> LinkedIn</a
-        >
-        <a href="mailto:pittera.joseph@gmail.com" class="contact-details"
-          ><i class="fas fa-at"></i> email</a
-        >
-        <a href="./CV/index.html" class="contact-details" target="_blank"
-          ><i class="fa-regular fa-file-lines"></i> CV</a
-        >
-      </div>
-    </section>
-
-    <footer>
-      <div>© 2022 — All Rights Reserved</div>
-    </footer>
+      <!-- ****************************** CONTACT SECTION ******************************** -->
+      <section id="contact" class="scroll-section">
+        <div class="contact-header">
+          <h1>Let's work together...</h1>
+        </div>
+        <div class="contact-links" id="contact-links">
+          <a
+            id="profile-link"
+            href="https://github.com/Joseph-Pittera"
+            target="_blank"
+            class="contact-details"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/joseph-pittera-a34a2030/"
+            target="_blank"
+            class="contact-details"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a href="mailto:pittera.joseph@gmail.com" class="contact-details"
+            ><i class="fas fa-at"></i> email</a
+          >
+          <a href="./CV/index.html" class="contact-details" target="_blank"
+            ><i class="fa-regular fa-file-lines"></i> CV</a
+          >
+        </div>
+        <footer>
+          <div>© 2022 — All Rights Reserved</div>
+        </footer>
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
