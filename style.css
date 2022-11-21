@@ -17,20 +17,20 @@
   --height-navbar: 50px;
   --height-navbar-mobile: 50px;
 }
-.container {
+body {
   min-height: 100vh;
   font-family:  'Poppins', sans-serif;
   overflow: overlay;
 }
-.container {
+/* .main {
   scroll-snap-type: y mandatory;
-  overflow-y: scroll overlay;
+  overflow-y: scroll;
   height: 100vh;
-}
-.container::-webkit-scrollbar {
+} */
+body::-webkit-scrollbar {
   width: 8px; 
 }
-.container::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: var(--light-gray);
   border-radius: 5px;
 }

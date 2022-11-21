@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Le juste prix</title>
+  </head>
+  <body>
+    <form class="form">
+      <h1 class="title">Jeu</h1>
+      <h2 class="subtitle">Devine le nombre !</h2>
+      <button type="button" class="play">Jouer</button>
+      <div class="card">
+        <label for="number" class="label"
+          >Devinez quel est le nombre mystère :
+          <input type="number" id="number" name="searchedNumber"
+        /></label>
+        <button type="button" class="test-btn">Test</button>
+      </div>
+      <div class="message"></div>
+      <div class="result"></div>
+      <div class="btn-card">
+        <div class="btn-message">Souhaitez-vous continuer ?</div>
+        <div class="btns">
+          <button type="button" class="yes-btn">Yes</button>
+          <button type="button" class="no-btn">No</button>
+        </div>
+      </div>
+    </form>
+    <script src="./main.js"></script>
+  </body>
+</html>

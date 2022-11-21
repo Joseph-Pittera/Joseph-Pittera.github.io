@@ -1,0 +1,122 @@
+body {
+    min-height: 100vh;
+    font-family: Lato, Helvetica, sans-serif;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    padding: clamp(20px, 5vw, 50px) 10px 10px;
+    overflow: overlay; /* make the background of the scrollball "transparent */
+  }
+  body::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */ 
+    background-color: #d1d1d1;
+    /* display: none; --> to hide the scrollbar*/ 
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 5px;
+  }
+  
+  .form {
+    margin: 5rem auto;
+    padding: 2rem;
+    min-width: 50rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .title {
+    margin: 2rem 0 1rem;
+    font-size: 4rem;
+  }
+  .subtitle {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  .play {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: rgb(201, 167, 94);
+    width: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+    font-size: 3rem;
+    border: none;
+    cursor: pointer;
+  }
+  .play:hover {
+    background-color: rgb(192, 143, 37);
+    color: white;
+  }
+  .card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label {
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  #number {
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    width: 6rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  }
+  #number:focus {
+    outline: 1px solid #222222be;
+  }
+  .message {
+    font-size: 2rem;
+  }
+  .result {
+    font-size: 2rem;
+  }
+  .test-btn, .yes-btn, .no-btn {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+  }
+  .test-btn {
+    background-color: cadetblue;
+  }
+  .test-btn:hover {
+    background-color: rgb(58, 117, 119);
+    color: white;
+  }
+  .btn-card {
+    margin-top: 2rem;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+  }
+  .btn-message {
+    font-size: 2rem;
+  }
+  .btns {
+    display: flex;
+  
+  }
+  .yes-btn {
+    background-color: rgb(97, 172, 103);
+  }
+  .yes-btn:hover {
+    background-color: rgb(57, 119, 63);
+    color: white;
+  }
+  .no-btn {
+    background-color: rgb(192, 118, 118);
+  }.no-btn:hover {
+    background-color: rgb(119, 62, 62);
+    color: white;
+  }
