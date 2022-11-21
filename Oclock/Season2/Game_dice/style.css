@@ -1,0 +1,107 @@
+/* Aucune modification du CSS n'est nécessaire pour valider l'exercice ! Bonne chance ! */
+
+body {
+  background-color: #b0ade3;
+}
+
+#app {
+  display: flex;
+}
+
+#player {
+  background-color: #9eea6e;
+  display: flex;
+  width: 100%;
+}
+
+#dealer {
+  background-color: #77af54;
+}
+
+.board {
+  position: relative;
+  min-height: 60vh;
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.dice {
+  background-image: url('./dice-sprite.png');
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+}
+#button {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  background-color: #559de1;
+}
+#button:hover {
+  background-color: #0b467e;
+  color: white;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 80%;
+  max-width: 40rem;
+  font-size: 1.4rem;
+}
+#nbDice {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.5rem 0.5rem;
+  width: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 1rem;
+}
+#nbDice:focus {
+  outline: 1px solid #222222be;
+}
+.results {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+.bold {
+  font-weight: 600;
+}
+.winner, .equality {
+  position: absolute;
+  padding: 2rem;
+  font-size: 2rem;
+  color: green;
+  animation: blur-appear 2s linear forwards;
+}
+.winner {
+  bottom: 1rem;
+}
+.equality {
+  top: -2rem
+}
+@keyframes blur-appear {
+  0%,20% {
+    opacity: 0;
+  }
+  100% {
+    transform: opacity(1);
+  }
+}

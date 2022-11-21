@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Roll</title>
+  </head>
+  <body>
+    <!-- Eh toi là, inutile de modifier le HTML : l'objectif est d'insérer des élements via JS ! Bonne chance ! -->
+    <div id="app">
+      <div class="board" id="player"></div>
+    </div>
+    <label for="nbDice"
+      >Combien de dés voulez-vous lancer ?<input
+        type="number"
+        id="nbDice"
+        name="nbDice"
+        class="nbDice"
+        min="1"
+        max="5"
+        value="1"
+    /></label>
+    <button type="button" id="button">Lancer</button>
+    <script src="./app.js"></script>
+  </body>
+</html>
