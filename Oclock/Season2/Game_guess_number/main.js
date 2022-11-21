@@ -11,7 +11,7 @@ const noBtn = document.getElementsByClassName("no-btn")[0];
 const btnCard = document.getElementsByClassName("btn-card")[0];
 const game = {
   min: 1,
-  max: 2,
+  max: 10,
   searchedNumber: 0,
   attempts: 1,
   scores: [],
