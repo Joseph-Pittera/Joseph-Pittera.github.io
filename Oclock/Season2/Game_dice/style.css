@@ -36,6 +36,12 @@ body {
   height: 100px;
   margin: 1em;
 }
+.interaction-card {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: space-evenly
+}
 #button {
   display: flex;
   justify-content: center;
