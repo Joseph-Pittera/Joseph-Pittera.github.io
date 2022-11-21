@@ -1,9 +1,15 @@
+const playerDiv = document.createElement("div");
+playerDiv.classList.add("board");
+playerDiv.id = "player";
+playerDiv.innerHTML = "<h2>PLAYER</h2>";
 const dealerDiv = document.createElement("div");
 dealerDiv.classList.add("board");
 dealerDiv.id = "dealer";
+dealerDiv.innerHTML = "<h2>DEALER</h2>";
+
 const app = document.querySelector("#app");
+app.appendChild(playerDiv);
 app.appendChild(dealerDiv);
-const playerDiv = document.querySelector("#player");
 const lancer = document.querySelector("#button");
 lancer.addEventListener("click", play);
 const nbDice = document.querySelector("#nbDice");
@@ -44,8 +50,8 @@ function winnerIs(player, msg) {
 let count = 0;
 
 function play() {
-  playerDiv.innerHTML = "";
-  dealerDiv.innerHTML = "";
+  playerDiv.innerHTML = "<h2>PLAYER</h2>";
+  dealerDiv.innerHTML = "<h2>DEALER</h2>";
   let numberOfDice = nbDice.value;
   createDice(playerDiv, numberOfDice);
   addResults(playerDiv, count);

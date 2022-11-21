@@ -4,15 +4,20 @@ body {
   background-color: #b0ade3;
   height: 100vh;
 }
-
+h2 {
+  position: absolute;
+  top: 1rem;
+  font-size: 3rem;
+}
+#dealer h2 {
+  color: whitesmoke;
+}
 #app {
   display: flex;
 }
 
 #player {
   background-color: #9eea6e;
-  display: flex;
-  width: 100%;
 }
 
 #dealer {
@@ -96,7 +101,7 @@ label {
   padding: 1rem;
   font-size: 3rem;
   color: green;
-  animation: blur-appear 2s linear forwards;
+  animation: blur-appear 0.7s ease forwards;
 }
 .winner {
   bottom: 0.5rem;
@@ -106,9 +111,10 @@ label {
 }
 @keyframes blur-appear {
   0%,20% {
-    opacity: 0;
+    scale: 0;
   }
+  40% {scale: 1.2;}
   100% {
-    transform: opacity(1);
+    scale: 1;
   }
 }
