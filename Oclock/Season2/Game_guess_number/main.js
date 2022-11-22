@@ -1,14 +1,17 @@
-const form = document.getElementsByClassName("form")[0];
-const playBtn = document.getElementsByClassName("play")[0];
-const card = document.getElementsByClassName("card")[0];
-const label = document.getElementsByClassName("label")[0];
-const testBtn = document.getElementsByClassName("test-btn")[0];
-const resultLbl = document.getElementsByClassName("result")[0];
-const messageLbl = document.getElementsByClassName("message")[0];
+// initialize the const to point to HTML elements
+const form = document.querySelector(".form");
+const playBtn = document.querySelector(".play");
+const card = document.querySelector(".card");
+const label = document.querySelector(".label");
+const testBtn = document.querySelector(".test-btn");
+const resultLbl = document.querySelector(".result");
+const messageLbl = document.querySelector(".message");
 const input = document.getElementById("number");
-const yesBtn = document.getElementsByClassName("yes-btn")[0];
-const noBtn = document.getElementsByClassName("no-btn")[0];
-const btnCard = document.getElementsByClassName("btn-card")[0];
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+const btnCard = document.querySelector(".btn-card");
+
+//initialize the "game" object
 const game = {
   min: 1,
   max: 10,
@@ -17,25 +20,34 @@ const game = {
   scores: [],
 };
 
-function randomNumber(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
-}
-
-function displayNone(e) {
-  e.style.display = "none";
-}
-
-playBtn.addEventListener("click", playGame);
+// add eventListener click on buttons
+playBtn.addEventListener("click", displayGame);
 testBtn.addEventListener("click", play);
 yesBtn.addEventListener("click", continueGame);
 noBtn.addEventListener("click", stopGame);
 
-function playGame() {
-  // debugger;
-  resultLbl.textContent = "";
-  displayGame();
+/**
+ * take 2 numbers and return a random number between min and max
+ * @param {Number} min
+ * @param {Number} max
+ * @returns {Number}
+ */
+function randomNumber(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
 }
 
+/**
+ * quick function to remove the display of an HTML element
+ * @param {HTMLElement} e
+ */
+function displayNone(e) {
+  e.style.display = "none";
+}
+
+/**
+ * display and initialize the HTML elements of the game
+ * and get a random number
+ */
 function displayGame() {
   displayNone(playBtn);
   displayNone(btnCard);
@@ -43,9 +55,13 @@ function displayGame() {
   testBtn.style.display = "block";
   // define the random number
   game.searchedNumber = randomNumber(game.min, game.max);
+  resultLbl.textContent = "";
   messageLbl.textContent = "";
 }
 
+/**
+ * manage HTML elements to continue playing a new round of the current game
+ */
 function continueGame() {
   displayGame();
   testBtn.style.display = "block";
@@ -53,6 +69,10 @@ function continueGame() {
   displayNone(resultLbl);
   game.attempts = 1;
 }
+
+/**
+ * manage HTML elements to stop the game and display results
+ */
 function stopGame() {
   displayNone(card);
   displayNone(btnCard);
@@ -63,6 +83,10 @@ function stopGame() {
   game.scores = [];
 }
 
+/**
+ * main function of the game
+ * @returns none
+ */
 function play() {
   messageLbl.textContent = "";
   // get the guessed user number
