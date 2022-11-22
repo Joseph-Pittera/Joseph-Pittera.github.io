@@ -1,0 +1,187 @@
+:root {
+  --grey: #666;
+  --red: #c89300;
+  --dark-red: #906a00;
+  --l-grey: #ccc;
+}
+/* make the standard font-size at 10px to have 1rem=10px */
+html {
+  font-size: 62.5%;
+}
+body {
+  /* overflow: overlay;  make the background of the scrollball "transparent */
+  font-family: "raleway", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.big {
+  font-size: 2.8rem;
+}
+.l-big {
+  font-size: 1.6rem;
+}
+.l2-big {
+  font-size: 1.2rem;
+}
+.bold {
+  font-weight: 800;
+}
+.through {
+  text-decoration: line-through;
+}
+.italic {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.pdt-ctn__solde {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  background: var(--red);
+  padding: 0.8rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  animation: color-chg 0.5s alternate infinite ease-in-out,
+    Y-move 3s alternate infinite linear;
+  z-index: 1;
+}
+@keyframes color-chg {
+  0% {
+    background-color: var(--red);
+  }
+  100% {
+    background-color: var(--dark-red);
+  }
+}
+@keyframes Y-move {
+  0% {
+    transform: translateY(10rem);
+  }
+  100% {
+    transform: translateY(-10rem);
+  }
+}
+.header {
+  background-color: var(--red);
+  color: white;
+}
+.title {
+  padding: 1.2rem;
+}
+.h1 {
+  background-color: var(--grey);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+.pdt-ctn {
+  display: flex;
+  padding: 2rem 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 70vh;
+  overflow: auto;
+  flex-grow: 1;
+}
+.pdt-ctn::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+  background-color: rgb(209, 209, 209);
+  /* display: none; --> to hide the scrollbar*/
+}
+.pdt-ctn::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 0.3rem;
+}
+.produit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--l-grey);
+  width: 27%;
+  min-width: 18rem;
+  max-width: 25rem;
+  margin: 0.5rem 1rem;
+  padding: 0.8rem;
+}
+.img-ctn {
+  display: flex;
+  justify-content: center;
+}
+.product__macaron {
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--grey);
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3%;
+  left: 70%;
+  border: 0.3rem solid var(--l-grey);
+  transition: transform 0.3s ease-in-out;
+}
+.product__macaron:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+.img {
+  width: 95%;
+  margin-bottom: 0.8rem;
+}
+.produit > h3 {
+  color: var(--l-grey);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--l-grey);
+  padding: 0.2rem;
+}
+.produit > h2 {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+.description {
+  margin: 1rem 0;
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+.produit > button {
+  margin: 0 -0.4rem -0.4rem -0.4rem;
+  background-color: var(--red);
+  font-size: 1.4rem;
+  color: white;
+  padding: 1.2rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+}
+.produit > button:hover {
+  background-color: var(--dark-red);
+}
+.footer {
+  background-color: var(--grey);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .produit > button {
+    font-size: 1.2rem;
+  }
+}
