@@ -1,0 +1,90 @@
+html {
+  margin: 20px 10px 20px 5px;
+  padding: 0 20px;
+  background: #001c1f;
+}
+body {
+  font-family: Lato, Helvetica, sans-serif;
+  background: #fcfbe1;
+  overflow: overlay; /* make the background of the scrollball "transparent */
+  border-radius: 8px;
+  border: 3px solid #440404;
+  box-shadow: 0 0 6px rgb(73, 19, 19);
+  padding: 5px 25px;
+  min-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+body:hover {
+  box-shadow: 0 0px 24px rgb(211, 6, 6);
+}
+
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+  background-color: rgb(194, 194, 194);
+  /* display: none; --> to hide the scrollbar*/
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+.body-ctn {
+  width: 100%;
+}
+h1 {
+  color: #fff2da;
+  background-color: #440404;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+h2 {
+  color: #440404;
+  font-size: 2rem;
+  font-weight: 800;
+}
+h3 {
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+.crepe-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+img {
+  max-width: 600px;
+  width: 100%;
+}
+p {
+  color: #474543;
+}
+.astuce {
+  background-color: #ffd58a;
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 2px 5px;
+}
+.blue {
+  color: #248dd9;
+}
+.red {
+  color: #440404;
+}
+.underlined {
+  border-bottom: 1px solid;
+}
+.bold {
+  font-weight: 800;
+}

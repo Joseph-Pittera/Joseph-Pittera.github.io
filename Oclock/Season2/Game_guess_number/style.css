@@ -47,8 +47,13 @@ body {
     cursor: pointer;
   }
   .play:hover {
+    background-color: rgb(192, 143, 37);    
+    color: white;
+  }
+  .play:focus {
     background-color: rgb(192, 143, 37);
     color: white;
+    outline: 1px solid black;
   }
   .card {
     display: none;
