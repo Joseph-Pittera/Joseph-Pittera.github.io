@@ -116,6 +116,14 @@ const app = {
       app.gridSizeInput.value === "" || app.pixelSizeInput.value === "";
   },
 
+  /**
+   * create and set a new input wit parameters
+   * @param {string} placeholder
+   * @param {string} className
+   * @param {number} min
+   * @param {number} max
+   * @returns {HTMLElement} input
+   */
   sizeInputSetting(placeholder, className, min, max) {
     const input = document.createElement("input");
     input.placeholder = placeholder;
