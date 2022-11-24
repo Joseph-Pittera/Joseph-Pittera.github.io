@@ -19,7 +19,7 @@
 }
 body {
   min-height: 100vh;
-  font-family:  'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow: overlay;
 }
 /* .main {
@@ -28,7 +28,7 @@ body {
   height: 100vh;
 } */
 body::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--light-gray);
@@ -38,8 +38,9 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
   scroll-snap-align: start;
 }
-h1, h2 {
-  font-family: 'Raleway', sans-serif;
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   text-align: center;
   color: var(--main-white);
@@ -57,7 +58,6 @@ li {
   display: inline;
 }
 
-
 /********* navbar ************/
 #navbar {
   height: var(--height-navbar);
@@ -65,7 +65,7 @@ li {
   background-color: var(--main-red);
   margin-top: 0;
   position: fixed;
-  box-shadow: 0 2px 5px rgb(0 0 0  / 50%);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 50%);
   transition: 0.3s;
   z-index: 1;
 }
@@ -98,7 +98,11 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(circle, var(--main-gray) 0%, var(--main-black) 100%);/* var(--main-gray); */
+  background: radial-gradient(
+    circle,
+    var(--main-gray) 0%,
+    var(--main-black) 100%
+  ); /* var(--main-gray); */
   opacity: 0;
   z-index: -1;
   color: var(--main-red);
@@ -116,7 +120,7 @@ li {
 /************ Welcome section ***************/
 .scroll-section {
   min-height: 100vh;
-  background: linear-gradient(to right, var(--main-gray), var(--main-black)) ;
+  background: linear-gradient(to right, var(--main-gray), var(--main-black));
   display: flex;
   text-align: center;
   justify-content: center;
@@ -138,7 +142,7 @@ li {
   padding-right: 2px;
 }
 #welcome-section > h1::before {
-  content : attr(data-text); /* to not forget !!! */
+  content: attr(data-text); /* to not forget !!! */
   position: absolute;
   top: 0;
   left: 0;
@@ -151,10 +155,12 @@ li {
   animation: appear-to-right 4s linear forwards;
 }
 @keyframes appear-to-right {
-  0%,10% {
+  0%,
+  10% {
     width: 0;
   }
-  60%,100% {
+  60%,
+  100% {
     width: 100%;
   }
   100% {
@@ -169,7 +175,8 @@ li {
   animation: appear 4s linear forwards;
 }
 @keyframes appear {
-  0%,55% {
+  0%,
+  55% {
     opacity: 0;
   }
   80% {
@@ -187,14 +194,14 @@ li {
   animation: blur-appear 5s linear forwards;
 }
 @keyframes blur-appear {
-  0%,60% {
+  0%,
+  60% {
     opacity: 0;
   }
   100% {
     transform: opacity(1);
   }
 }
-
 
 /************* trick to present the project-section at the ******************/
 /************* right place when clicking on "Work" button *******************/
@@ -211,7 +218,7 @@ li {
   min-height: 100vh;
   text-align: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgb(45 60 101),rgb(0 23 85)) ;
+  background: linear-gradient(to right, rgb(45 60 101), rgb(0 23 85));
 }
 .projects__title {
   font-size: calc(1.5rem + 2.5vw);
@@ -268,10 +275,11 @@ li {
 /********************************* BLOG SECTION **************************/
 #blog {
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #95d1d3, #56A3A6);
+  background: linear-gradient(to right, #95d1d3, #56a3a6);
   padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
-#blog h1, #blog h2 {
+#blog h1,
+#blog h2 {
   color: #1f1f1f;
   text-align: center;
   margin: 1rem;
@@ -322,7 +330,7 @@ li {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, #db8404, #bc7000) ;
+  background: linear-gradient(to right, #db8404, #bc7000);
 }
 .contact-header {
   font-size: 2rem;
@@ -348,12 +356,11 @@ li {
   }
 }
 
-
 /* footer */
 footer {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70)) ;
+  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70));
   display: flex;
   justify-content: right;
   align-items: center;
@@ -364,7 +371,6 @@ footer {
   font-size: 0.9rem;
   color: var(--main-white);
 }
-
 
 /* media queries */
 @media screen and (max-width: 760px) {
@@ -433,7 +439,7 @@ footer {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   #navbar-links li {
     width: 25%;
     font-size: 1rem;
@@ -468,7 +474,6 @@ footer {
     line-height: 1.5rem;
     padding: 0 1rem 1rem;
   }
-
 }
 @media screen and (orientation: landscape) and (max-height: 600px) {
   /**** navbar ****/
@@ -477,7 +482,7 @@ footer {
   }
   #navbar-links > a {
     padding: 15px;
-  }  /**** welcome section ****/
+  } /**** welcome section ****/
   #welcome-section > h1 {
     font-size: 2.4rem;
     margin: 10px 20px;
@@ -508,4 +513,3 @@ footer {
     margin: 0;
   }
 }
-
