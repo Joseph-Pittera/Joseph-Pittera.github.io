@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   background: linear-gradient(135deg, #444aff, #5953ff);
 }
-.global {
+.drawing {
   display: flex;
   margin: 1rem auto;
 }

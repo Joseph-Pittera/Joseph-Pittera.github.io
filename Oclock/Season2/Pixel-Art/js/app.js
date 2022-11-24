@@ -21,7 +21,7 @@ const app = {
     "white",
     "yellow",
   ],
-  currentColor: 1,
+  selectedColor: 1,
   minGridSize: 4,
   maxGridSize: 32,
   minPixelSize: 12,
@@ -45,15 +45,15 @@ const app = {
    * @param {HTMLElement} cell
    */
   switchCellColor(cell) {
-    if (cell.classList.contains(`--${app.arrayOfColors[app.currentColor]}`)) {
+    if (cell.classList.contains(`--${app.arrayOfColors[app.selectedColor]}`)) {
       return;
     }
     // loop on the color table "styles" to remove all the already present "styles" class on the cell
-    for (let i = 0; i < app.arrayOfColors.length; i++) {
-      cell.classList.remove(`--${app.arrayOfColors[i]}`);
+    for (let color of app.arrayOfColors) {
+      cell.classList.remove(`--${color}`);
     }
     // add the right class on the cell
-    cell.classList.add(`--${app.arrayOfColors[app.currentColor]}`);
+    cell.classList.add(`--${app.arrayOfColors[app.selectedColor]}`);
   },
 
   /**
@@ -64,8 +64,8 @@ const app = {
   createCell(pixelSize) {
     const cellDiv = app.createDiv("cell");
     cellDiv.style.width = cellDiv.style.height = pixelSize + "px";
-    cellDiv.addEventListener("click", function (event) {
-      app.switchCellColor(event.target);
+    cellDiv.addEventListener("click", function (e) {
+      app.switchCellColor(e.target);
     });
     return cellDiv;
   },
@@ -76,11 +76,11 @@ const app = {
    * @param {string} pixelSize
    */
   gridCreation(gridSize, pixelSize) {
-    app.globalDiv.innerHTML = "";
+    app.drawingDiv.innerHTML = "";
     const size = Number(gridSize);
     for (let line = 0; line < size; line++) {
       const lineDiv = app.createDiv("line");
-      app.globalDiv.appendChild(lineDiv);
+      app.drawingDiv.appendChild(lineDiv);
       for (let cell = 0; cell < size; cell++) {
         const cellDiv = app.createCell(pixelSize);
         lineDiv.appendChild(cellDiv);
@@ -98,10 +98,10 @@ const app = {
     if (event.target.classList.contains("--checked")) {
       return;
     }
-    for (let i = 0; i < app.arrayOfColors.length; i++) {
+    for (let i in app.arrayOfColors) {
       if (app.colorSelectorButtons[i] === event.target) {
         app.colorSelectorButtons[i].classList.add("--checked");
-        app.currentColor = i;
+        app.selectedColor = i;
       } else {
         app.colorSelectorButtons[i].classList.remove("--checked");
       }
@@ -116,61 +116,74 @@ const app = {
       app.gridSizeInput.value === "" || app.pixelSizeInput.value === "";
   },
 
+  sizeInputSetting(placeholder, className, min, max) {
+    const input = document.createElement("input");
+    input.placeholder = placeholder;
+    input.className = className;
+    input.type = "number";
+    input.min = min;
+    input.max = max;
+    input.addEventListener("input", app.validButtonEnablingCheck);
+    return input;
+  },
+
   /**
    * main function to initiate the game
    */
   init() {
-    // Create the form
+    // Create the form the set size parameters
     const form = document.createElement("form");
     form.className = "configuration";
     document.body.appendChild(form);
+    // add a hidding property on scroll to the form
     let lastScrollTop = 0;
     window.addEventListener("scroll", function () {
       const scrollTop =
         window.pageTOffset || this.document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        form.style.top = "-70px";
+        form.style.top = `-${form.offsetHeight}px`;
       } else form.style.top = "0";
       lastScrollTop = scrollTop;
     });
-    // create the pixel-art div
-    const pixelArtDiv = document.createElement("div");
-    pixelArtDiv.className = "pixel-art";
-    document.body.appendChild(pixelArtDiv);
-
-    app.globalDiv = app.createDiv("global");
-    pixelArtDiv.appendChild(app.globalDiv);
 
     // Form inputs
-    app.gridSizeInput = document.createElement("input");
-    app.gridSizeInput.placeholder = "Taille de la grille";
-    app.gridSizeInput.className = "gridSize";
-    app.gridSizeInput.type = "number";
-    app.gridSizeInput.min = app.minGridSize;
-    app.gridSizeInput.max = app.maxGridSize;
-    app.gridSizeInput.addEventListener("input", app.validButtonEnablingCheck);
-
-    app.pixelSizeInput = document.createElement("input");
-    app.pixelSizeInput.placeholder = "Taille des pixels";
-    app.pixelSizeInput.className = "pixelSize";
-    app.pixelSizeInput.type = "number";
-    app.pixelSizeInput.min = app.minPixelSize;
-    app.pixelSizeInput.max = app.maxPixelSize;
-    app.pixelSizeInput.addEventListener("input", app.validButtonEnablingCheck);
-
-    const validForm = document.querySelector(".configuration");
-    validForm.appendChild(app.gridSizeInput);
-    validForm.appendChild(app.pixelSizeInput);
+    // set up grid size input
+    app.gridSizeInput = app.sizeInputSetting(
+      "Taille de la grille",
+      "gridSize",
+      app.minGridSize,
+      app.maxGridSize
+    );
+    // set up pixel size input
+    app.pixelSizeInput = app.sizeInputSetting(
+      "Taille des pixels",
+      "pixelSize",
+      app.minPixelSize,
+      app.maxPixelSize
+    );
 
     // Form button
     app.validButton = document.createElement("button");
     app.validButton.type = "button";
     app.validButton.className = "btn--submit";
     app.validButton.textContent = "Valider";
+    app.validButtonEnablingCheck();
     app.validButton.addEventListener("click", function () {
       app.gridCreation(app.gridSizeInput.value, app.pixelSizeInput.value);
     });
-    validForm.appendChild(app.validButton);
+
+    form.appendChild(app.gridSizeInput);
+    form.appendChild(app.pixelSizeInput);
+    form.appendChild(app.validButton);
+
+    // create the pixel-art div that contains the drawing and the colors
+    const pixelArtDiv = document.createElement("div");
+    pixelArtDiv.className = "pixel-art";
+    document.body.appendChild(pixelArtDiv);
+
+    // create the drawing div
+    app.drawingDiv = app.createDiv("drawing");
+    pixelArtDiv.appendChild(app.drawingDiv);
 
     // Style color selection buttons
     const colorSelectorDiv = app.createDiv("color-selector");
@@ -183,7 +196,7 @@ const app = {
       colorSelectorButton.name = "color-selector-buttons";
       colorSelectorButton.classList.add("color-selector__button");
       colorSelectorButton.classList.add(`--${app.arrayOfColors[i]}`);
-      if (i === app.currentColor) {
+      if (i === app.selectedColor) {
         colorSelectorButton.classList.add("--checked");
       }
       colorSelectorButton.addEventListener("click", function (event) {
@@ -191,7 +204,8 @@ const app = {
       });
       colorSelectorDiv.appendChild(colorSelectorButton);
     }
-    app.validButtonEnablingCheck();
+
+    // creation of the grid with standard size at initiation of the page
     app.gridCreation(app.standardGridSize, app.standardPixelSize);
   },
 };
