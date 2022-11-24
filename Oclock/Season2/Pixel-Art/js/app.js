@@ -41,12 +41,6 @@ const app = {
   },
 
   /**
-   * set the background and border of the color class for the cells of the pixel art
-   * @param {string} className
-   */
-  setCSSParametersForColorClass(className) {},
-
-  /**
    * switch cell color by changing the class of the cell
    * @param {HTMLElement} cell
    */
