@@ -117,11 +117,11 @@ const app = {
   },
 
   /**
-   * create and set a new input wit parameters
-   * @param {string} placeholder
-   * @param {string} className
-   * @param {number} min
-   * @param {number} max
+   * create and set a new input with parameters
+   * @param {string} placeholder - input placeholder
+   * @param {string} className - input class
+   * @param {number} min - input min number
+   * @param {number} max - input max number
    * @returns {HTMLElement} input
    */
   sizeInputSetting(placeholder, className, min, max) {
