@@ -89,26 +89,6 @@ const app = {
   },
 
   /**
-   * verify if the radio is already checked
-   * else add the class --checked and remove it from the others
-   * @param {*} event
-   *
-   */
-  radioCheckHandler(event) {
-    if (event.target.classList.contains("--checked")) {
-      return;
-    }
-    for (let i in app.arrayOfColors) {
-      if (app.colorSelectorButtons[i] === event.target) {
-        app.colorSelectorButtons[i].classList.add("--checked");
-        app.selectedColor = i;
-      } else {
-        app.colorSelectorButtons[i].classList.remove("--checked");
-      }
-    }
-  },
-
-  /**
    * disable the "Valider" button if no data in inputs
    */
   validButtonEnablingCheck() {
@@ -133,6 +113,46 @@ const app = {
     input.max = max;
     input.addEventListener("input", app.validButtonEnablingCheck);
     return input;
+  },
+
+  /**
+   * verify if the radio is already checked
+   * else add the class --checked and remove it from the others
+   * @param {*} event
+   *
+   */
+  radioCheckHandler(event) {
+    if (event.target.classList.contains("--checked")) {
+      return;
+    }
+    for (let i in app.arrayOfColors) {
+      if (app.colorSelectorButtons[i] === event.target) {
+        app.colorSelectorButtons[i].classList.add("--checked");
+        app.selectedColor = i;
+      } else {
+        app.colorSelectorButtons[i].classList.remove("--checked");
+      }
+    }
+  },
+
+  /**
+   * create and set a radio button in the arrayOfColor
+   * @param {string} color
+   */
+  colorRadioInputSetting(color, colorSelectorDiv) {
+    const colorSelectorButton = document.createElement("input");
+    app.colorSelectorButtons.push(colorSelectorButton);
+    colorSelectorButton.type = "radio";
+    colorSelectorButton.name = "color-selector-buttons";
+    colorSelectorButton.classList.add("color-selector__button");
+    colorSelectorButton.classList.add(`--${color}`);
+    if (color === app.selectedColor) {
+      colorSelectorButton.classList.add("--checked");
+    }
+    colorSelectorButton.addEventListener("click", function (event) {
+      app.radioCheckHandler(event);
+    });
+    colorSelectorDiv.appendChild(colorSelectorButton);
   },
 
   /**
@@ -197,22 +217,9 @@ const app = {
     const colorSelectorDiv = app.createDiv("color-selector");
     pixelArtDiv.appendChild(colorSelectorDiv);
     app.colorSelectorButtons = [];
-    for (let i = 0; i < app.arrayOfColors.length; i++) {
-      const colorSelectorButton = document.createElement("input");
-      app.colorSelectorButtons.push(colorSelectorButton);
-      colorSelectorButton.type = "radio";
-      colorSelectorButton.name = "color-selector-buttons";
-      colorSelectorButton.classList.add("color-selector__button");
-      colorSelectorButton.classList.add(`--${app.arrayOfColors[i]}`);
-      if (i === app.selectedColor) {
-        colorSelectorButton.classList.add("--checked");
-      }
-      colorSelectorButton.addEventListener("click", function (event) {
-        app.radioCheckHandler(event);
-      });
-      colorSelectorDiv.appendChild(colorSelectorButton);
-    }
-
+    app.arrayOfColors.forEach((color) =>
+      app.colorRadioInputSetting(color, colorSelectorDiv)
+    );
     // creation of the grid with standard size at initiation of the page
     app.gridCreation(app.standardGridSize, app.standardPixelSize);
   },
