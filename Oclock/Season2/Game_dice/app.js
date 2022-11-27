@@ -45,6 +45,7 @@ function createDice(player, n) {
     diceDiv.classList.add("dice");
     player.appendChild(diceDiv);
     let diceNumber = randomNumber(1, 6);
+    // display the right face of the dice by changing the background position X
     diceDiv.style.backgroundPositionX =
       (20 * (diceNumber - 1)).toString() + "%";
     count += diceNumber;
