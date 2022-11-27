@@ -186,3 +186,34 @@ body::-webkit-scrollbar-thumb {
   background-color: yellow;
   border-color: rgb(167, 167, 15);
 }
+
+@media screen and (max-width: 800px) {
+  .configuration {
+    flex-direction: column;
+    height: 25vh;
+  }
+  .gridSize,
+  .pixelSize,
+  .btn--submit {
+    width: 50vw;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+  .color-selector {
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .configuration {
+    flex-direction: column;
+    height: 20vh;
+  }
+  .gridSize,
+  .pixelSize,
+  .btn--submit {
+    width: 50vw;
+    border-radius: 5px;
+  }
+}
