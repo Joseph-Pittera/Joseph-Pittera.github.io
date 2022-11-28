@@ -1,62 +1,66 @@
 body {
-    min-height: 100vh;
-    font-family: Lato, Helvetica, sans-serif;
-    background: linear-gradient(to right, #95d1d3, #56A3A6);
-    padding: clamp(20px, 5vw, 50px) 10px 10px;
+  min-height: 100vh;
+  font-family: Lato, Helvetica, sans-serif;
+  background: linear-gradient(to right, #95d1d3, #56a3a6);
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 body::-webkit-scrollbar {
-    width: 10px; /* width of the entire scrollbar */ 
-    background-color: #56A3A6;
-    /* display: none; --> to hide the scrollbar*/ 
+  width: 10px; /* width of the entire scrollbar */
+  background-color: #56a3a6;
+  /* display: none; --> to hide the scrollbar*/
 }
 body::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 5px;
+  background-color: grey;
+  border-radius: 5px;
 }
 .bold {
-    font-weight: 500;
+  font-weight: 500;
 }
-.title, .subtitle {
-    text-align: center;
-    margin: 2rem;
-    padding: 1rem;
+.underlined {
+  text-decoration: underline;
+}
+.title,
+.subtitle {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
 }
 .title {
-    font-size: calc(2rem + 3vw);
-    font-family: Lato, sans-serif;
+  font-size: calc(2rem + 3vw);
+  font-family: Lato, sans-serif;
 }
 .subtitle {
-    font-size: 4rem;
-    font-family: Raleway, sans-serif;
+  font-size: 4rem;
+  font-family: Raleway, sans-serif;
 }
 .articles-section {
-    display: flex;
-    flex-direction: column;
-    margin: 10rem auto;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  width: 80%;
 }
 .article {
-    margin: 0.5rem;
-    padding: 0 0.5rem;
-    border-radius: 0.5rem;
-    background-color: #fafafa;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fafafa;
 }
 .article__title {
-    padding: 2rem 2rem 1rem;
-    font-size: 2.5rem;
+  padding: 2rem 2rem 1rem;
+  font-size: 2.5rem;
 }
 .article__description {
-    padding: 0 2rem 3rem;
-    font-size: 1.8rem;
-    line-height: 3rem;
-    letter-spacing: 0.1rem;
-    font-weight: 300;
+  padding: 0 2rem 3rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
 }
-@media screen and (max-width:500px) {
-    .olduvai-bg {
-        background-image: none;
-        color: black;
-        height: auto;
-        margin: 1rem 0 4rem;
-    }
+@media screen and (max-width: 500px) {
+  .olduvai-bg {
+    background-image: none;
+    color: black;
+    height: auto;
+    margin: 1rem 0 4rem;
+  }
 }

@@ -1,81 +1,104 @@
 .articles-section {
-    margin: 6rem auto;
-    max-width: 102.4rem;
+  margin: 6rem auto;
+  max-width: 102.4rem;
 }
 .article__title {
-    font-size: 3rem;
-    margin: 2rem 0 4rem;
+  font-size: 3rem;
+  margin: 2rem 0 4rem;
 }
-.supply-chain-img, .boat-img {
-    display: block;
-    margin: 1rem 3rem;
-    width: 40rem;
+.supply-chain-img,
+.boat-img {
+  display: block;
+  margin: 1rem 3rem;
+  width: 40rem;
 }
 .oclock-logo {
-    display: block;
-    margin: 3rem 1rem 1rem;
-    width: 35%;
-    max-width: 10rem;
+  display: block;
+  margin: 3rem 1rem 1rem;
+  width: 35%;
+  max-width: 10rem;
 }
 .bureau-img {
-    display: block;
-    margin: 2rem 2rem 1rem;
-    width: 35%;
-    max-width: 25rem;
+  display: block;
+  margin: 2rem 2rem 1rem;
+  width: 35%;
+  max-width: 25rem;
+}
+.bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 32rem;
+  margin: 0 -0.5rem 4rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #fafafa;
+  font-family: "Vast Shadow", cursive;
+  font-size: calc(1rem + 4vw);
+  text-align: center;
 }
 .olduvai-bg {
-    background-image: url(./S01/assets/grotte-vue-sur-mer.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 32rem;
-    margin: 0 -0.5rem 4rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    color: #FAFAFA;
-    font-family: 'Vast Shadow', cursive;
-    font-size: calc(1rem + 4vw);
-    text-align: center;
+  background-image: url(./S01/assets/grotte-vue-sur-mer.jpg);
 }
-.linux-ico, .HTML-CSS-logos, .pair-prog-img {
-    display: block;
-    margin: 1rem 2rem;
-    width: 35%;
-    max-width: 15rem;
+.code-bg {
+  background-image: url(./S02/assets/code.jpg);
+}
+.linux-ico,
+.HTML-CSS-logos,
+.pair-prog-img {
+  display: block;
+  margin: 1rem 2rem;
+  width: 35%;
+  max-width: 15rem;
+}
+.guess-number,
+.dice-game {
+  display: block;
+  margin: 0 auto 2rem auto;
+  width: 50%;
+  border-radius: 0.5rem;
+}
+.pixel-art {
+  display: block;
+  margin: 0 auto 2rem auto;
+  width: 30%;
+  border-radius: 0.5rem;
 }
 .pair-prog-img {
-    max-width: 20rem;
+  max-width: 20rem;
 }
 .left {
-    float: left;
+  float: left;
 }
 .right {
-    float: right;
+  float: right;
 }
-@media screen and (max-width:800px) {
-    .article__title {
-        margin: 0rem -0.5rem 2rem;
-    }
-    .supply-chain-img, .boat-img, .bureau-img {
-        float: none;
-        margin: 0 auto 1rem;
-        width: 80%;
-    }
-    .oclock-logo {
-        max-width: 10rem;
-    }
-    .articles-section {
-        width: 95%;
-        margin: 2rem auto;
-    }
-    .article__description {
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 800px) {
+  .article__title {
+    margin: 0rem -0.5rem 2rem;
+  }
+  .supply-chain-img,
+  .boat-img,
+  .bureau-img {
+    float: none;
+    margin: 0 auto 1rem;
+    width: 80%;
+  }
+  .oclock-logo {
+    max-width: 10rem;
+  }
+  .articles-section {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .article__description {
+    font-size: 1.5rem;
+  }
 }
-@media screen and (max-width:500px) {
-    .olduvai-bg {
-        background-image: none;
-        color: black;
-        height: auto;
-        margin: 1rem 0 4rem;
-    }
+@media screen and (max-width: 500px) {
+  .olduvai-bg {
+    background-image: none;
+    color: black;
+    height: auto;
+    margin: 1rem 0 4rem;
+  }
 }

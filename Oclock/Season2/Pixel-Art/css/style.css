@@ -199,6 +199,9 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     padding: 1rem;
   }
+  .drawing {
+    z-index: 1;
+  }
   .color-selector {
     flex-direction: row;
     align-content: flex-start;
