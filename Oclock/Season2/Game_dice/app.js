@@ -114,7 +114,7 @@ function play() {
     } else if (
       parseInt(scores[0].textContent) < parseInt(scores[1].textContent)
     ) {
-      winnerIs(dealerDiv, "Vous avez GAGNE !");
+      winnerIs(dealerDiv, "Le Dealer a GAGNE !");
     } else {
       winnerIs(playerDiv, "EGALITE");
       winnerIs(dealerDiv, "EGALITE");
