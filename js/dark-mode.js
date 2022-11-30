@@ -11,6 +11,7 @@ export const darkMode = {
     const contactDetails = document.querySelectorAll(".contact-details");
     const footer = document.querySelector("footer");
     const navbar = document.querySelector("#navbar");
+    const navbarLinks = document.querySelectorAll(".link-dark");
 
     darkBtn.addEventListener("click", () => {
       if (darkIcon.classList.contains("fa-sun")) {
@@ -23,6 +24,10 @@ export const darkMode = {
         contactSection.style.background = "var(--light-mode-four)";
         // darkBtn.style.background = "var(--light-mode-five)";
         navbar.style.background = "var(--light-mode-five)";
+        // debugger;
+        navbarLinks.forEach((x) =>
+          x.classList.replace("link-dark", "link-light")
+        );
         footer.style.background = "var(--light-mode-five)";
         contactDetails.forEach((x) => (x.style.textShadow = "none"));
       } else {
@@ -39,6 +44,9 @@ export const darkMode = {
           "linear-gradient( to right, var(--contact-light-blue),var(--contact-dark-blue))";
         // darkBtn.style.background = "var(--main-red)";
         navbar.style.background = "var(--main-red)";
+        navbarLinks.forEach((x) =>
+          x.classList.replace("link-light", "link-dark")
+        );
         footer.style.background =
           "linear-gradient(  to right, var(--home-light-blue), var(--home-dark-blue)  )";
         contactDetails.forEach(

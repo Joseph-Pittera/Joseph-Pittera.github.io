@@ -108,7 +108,7 @@ li {
 }
 /* Trick to avoid using "transition: background-color" */
 /* that is using "paint" css function which is time consuming */
-#navbar-links a::after {
+.link-dark::after {
   content: ""; /* to not forget if no text nor image !!! */
   position: absolute;
   top: 0;
@@ -120,6 +120,18 @@ li {
     var(--project-dark-blue) 0%,
     var(--home-dark-blue) 100%
   );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s;
+}
+.link-light::after {
+  content: ""; /* to not forget if no text nor image !!! */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--light-mode-one);
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s;
@@ -136,12 +148,14 @@ li {
 }
 
 @media (hover: hover) {
-  #navbar-links a:hover::after {
+  .link-dark:hover::after,
+  .link-light:hover::after {
     opacity: 1;
   }
-  #navbar-links a:hover {
+  .link-dark:hover {
     color: var(--light-red);
   }
+
   .dark-mode-btn:hover {
     scale: 1.6;
   }
