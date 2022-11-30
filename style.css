@@ -6,10 +6,19 @@
   padding: 0;
 }
 :root {
+  --home-light-blue: #0c1430;
+  --home-dark-blue: #070c1d;
+  --project-light-blue: #001f54;
+  --project-dark-blue: #00113d;
+  --blog-light-blue: #034078;
+  --blog-dark-blue: #002c55;
+  --contact-light-blue: #1282a2;
+  --contact-dark-blue: #0e6a83;
+  --old-contact-light-yellow: #db8404;
+  --old-contact-dark-yellow: #bc7000;
   --main-white: rgb(240, 240, 240);
   --main-red: rgb(97, 1, 1);
   --light-red: #be3144;
-  --main-blue: #45567d;
   --main-gray: rgb(48, 45, 45);
   --light-gray: rgb(115, 110, 110);
   --dark-gray: rgb(37, 34, 34);
@@ -108,6 +117,18 @@ li {
   color: var(--main-red);
   transition: opacity 0.3s;
 }
+.dark-mode-btn {
+  width: 20px;
+  height: 20px;
+  margin: auto 1rem;
+  background-color: var(--main-red);
+  color: var(--main-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  scale: 1.2;
+}
+
 @media (hover: hover) {
   #navbar-links a:hover::after {
     opacity: 1;
@@ -115,12 +136,20 @@ li {
   #navbar-links a:hover {
     color: var(--light-red);
   }
+  .dark-mode-btn:hover {
+    color: var(--home-dark-blue);
+    scale: 1.5;
+  }
 }
 
 /************ Welcome section ***************/
 .scroll-section {
   min-height: 100vh;
-  background: linear-gradient(to right, var(--main-gray), var(--main-black));
+  background: linear-gradient(
+    to right,
+    var(--home-light-blue),
+    var(--home-dark-blue)
+  );
   display: flex;
   text-align: center;
   justify-content: center;
@@ -218,7 +247,11 @@ li {
   min-height: 100vh;
   text-align: center;
   flex-direction: column;
-  background: linear-gradient(to right, rgb(45 60 101), rgb(0 23 85));
+  background: linear-gradient(
+    to right,
+    var(--project-light-blue),
+    var(--project-dark-blue)
+  );
 }
 .projects__title {
   font-size: calc(1.5rem + 2.5vw);
@@ -275,12 +308,16 @@ li {
 /********************************* BLOG SECTION **************************/
 #blog {
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #95d1d3, #56a3a6);
+  background: linear-gradient(
+    to right,
+    var(--blog-light-blue),
+    var(--blog-dark-blue)
+  );
   padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 #blog h1,
 #blog h2 {
-  color: #1f1f1f;
+  color: var(--main-white);
   text-align: center;
   margin: 1rem;
 }
@@ -292,6 +329,7 @@ li {
   font-family: Lato, sans-serif;
 }
 .blog__subtitle {
+  color: var(--main-white);
   font-size: calc(1rem + 1.8vw);
   font-family: Raleway, sans-serif;
 }
@@ -330,7 +368,11 @@ li {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to right, #db8404, #bc7000);
+  background: linear-gradient(
+    to right,
+    var(--contact-light-blue),
+    var(--contact-dark-blue)
+  );
 }
 .contact-header {
   font-size: 2rem;
@@ -360,7 +402,11 @@ li {
 footer {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to right, rgb(57, 62, 60), rgb(57, 62, 70));
+  background: linear-gradient(
+    to right,
+    var(--home-light-blue),
+    var(--home-dark-blue)
+  );
   display: flex;
   justify-content: right;
   align-items: center;

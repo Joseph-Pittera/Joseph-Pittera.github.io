@@ -20,6 +20,7 @@
       src="https://kit.fontawesome.com/f688d1844f.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./js/script.js"></script>
     <title>Portfolio</title>
   </head>
   <body class="container">
@@ -28,7 +29,7 @@
       <nav id="navbar">
         <ul id="navbar-links">
           <li>
-            <a href="#welcome-section">About </a>
+            <a href="#welcome-section">Home </a>
           </li>
           <li>
             <a href="#projects">Projets </a>
@@ -38,6 +39,11 @@
           </li>
           <li>
             <a href="#contact">Contact </a>
+          </li>
+          <li>
+            <button class="dark-mode-btn">
+              <i class="fa-solid fa-sun"></i>
+            </button>
           </li>
         </ul>
       </nav>
@@ -97,8 +103,8 @@
       </section>
       <!-- ****************************** BLOG SECTION *********************************** -->
       <section class="scroll-section" id="blog">
-        <h1 class="blog__title bold">Mon parcours O'clock</h1>
-        <h2 class="blog__subtitle">Formation développeur JS</h2>
+        <h2 class="blog__title bold">Mon parcours O'clock</h2>
+        <h3 class="blog__subtitle">Formation développeur JS</h3>
         <section class="articles-section">
           <!--       <a href="./Blog/S08/index.html" class="article__link">
           <article class="article">
@@ -141,14 +147,23 @@
           </article>
         </a> -->
           <article class="article">
-            <a href="./Blog/S02/index.html" class="article__link">
-              <h3 class="article__title bold">Saison 2 : JavaScript</h3>
+            <a href="./Blog/Before/index.html" class="article__link">
+              <h3 class="article__title bold">Avant O'Clock</h3>
               <p class="article__description">
-                Les 3ème et 4ème semaines nous font découvrir le langage
-                JavaScript et ses nombreuses possibilités d'animation d'une page
-                Web. Ces 2 semaines seront le veritable socle de notre
-                formation, et nous donnerons les bases de synthaxe importantes
-                pour la suite.
+                Après 12 ans en Supply Chain dans de grandes entreprises, une
+                lassitute professionnelle se faisait de plus en plus sentir.
+                <br />
+                L'envie d'un nouveau challenge a pris le dessus !
+              </p>
+            </a>
+          </article>
+          <article class="article">
+            <a href="./Blog/S00/index.html" class="article__link">
+              <h3 class="article__title bold">Saison 0 : Préparation</h3>
+              <p class="article__description">
+                Les semaines précédant la formation sont consacrées au
+                paramétrage de notre environnement de travail : hardware et
+                software.
               </p>
             </a>
           </article>
@@ -164,23 +179,14 @@
             </a>
           </article>
           <article class="article">
-            <a href="./Blog/S00/index.html" class="article__link">
-              <h3 class="article__title bold">Saison 0 : Préparation</h3>
+            <a href="./Blog/S02/index.html" class="article__link">
+              <h3 class="article__title bold">Saison 2 : JavaScript</h3>
               <p class="article__description">
-                Les semaines précédant la formation sont consacrées au
-                paramétrage de notre environnement de travail : hardware et
-                software.
-              </p>
-            </a>
-          </article>
-          <article class="article">
-            <a href="./Blog/Before/index.html" class="article__link">
-              <h3 class="article__title bold">Avant O'Clock</h3>
-              <p class="article__description">
-                Après 12 ans en Supply Chain dans de grandes entreprises, une
-                lassitute professionnelle se faisait de plus en plus sentir.
-                <br />
-                L'envie d'un nouveau challenge a pris le dessus !
+                Les 3ème et 4ème semaines nous font découvrir le langage
+                JavaScript et ses nombreuses possibilités d'animation d'une page
+                Web. Ces 2 semaines seront le veritable socle de notre
+                formation, et nous donnerons les bases de synthaxe importantes
+                pour la suite.
               </p>
             </a>
           </article>
@@ -217,6 +223,5 @@
         </footer>
       </section>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
