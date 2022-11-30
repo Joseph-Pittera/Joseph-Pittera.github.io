@@ -46,6 +46,7 @@ export const darkMode = {
           (x) => (x.style.textShadow = "2px 2px 1px #1f1f1f")
         );
       }
+      window.focus();
     });
   },
 

@@ -496,7 +496,11 @@ footer {
 }
 @media screen and (max-width: 500px) {
   #navbar-links li {
-    width: 25%;
+    width: 22%;
+    font-size: 1rem;
+  }
+  #navbar-links li:last-of-type {
+    width: 14%;
     font-size: 1rem;
   }
   #navbar-links a {
@@ -504,9 +508,6 @@ footer {
     margin: auto;
     text-align: center;
     padding: 0 10px;
-  }
-  #navbar-links a:last-of-type {
-    padding: 0 10px 0 0;
   }
   .title {
     font-size: 2rem;
