@@ -10,17 +10,17 @@ button {
   color: inherit;
 }
 :root {
-  --home-light-blue: #151d36;
-  --home-dark-blue: #0f1320;
-  --project-light-blue: #002754;
-  --project-dark-blue: #001a3d;
-  --blog-light-blue: #03498a;
-  --blog-dark-blue: #033666;
-  --contact-light-blue: #1282a2;
-  --contact-dark-blue: #0e6a83;
+  --home-light-blue: #101a39;
+  --home-dark-blue: #03091c;
+  --project-light-blue: #012d5f;
+  --project-dark-blue: #002049;
+  --blog-light-blue: #01519c;
+  --blog-dark-blue: #003d75;
+  --contact-light-blue: #0067c7;
+  --contact-dark-blue: #005bb0;
   --old-contact-light-yellow: #db8404;
   --old-contact-dark-yellow: #bc7000;
-  --main-white: rgb(240, 240, 240);
+  --main-white: #f0f0f0;
   --main-red: rgb(97, 1, 1);
   --light-red: rgb(168, 38, 56);
   --main-gray: rgb(48, 45, 45);

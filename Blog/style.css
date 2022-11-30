@@ -1,12 +1,12 @@
 body {
   min-height: 100vh;
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #95d1d3, #56a3a6);
+  background: linear-gradient(to right, #01519c, #003d75);
   padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 body::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
-  background-color: #56a3a6;
+  background-color: #003d75;
   /* display: none; --> to hide the scrollbar*/
 }
 body::-webkit-scrollbar-thumb {
@@ -19,11 +19,11 @@ body::-webkit-scrollbar-thumb {
 .underlined {
   text-decoration: underline;
 }
-.title,
-.subtitle {
+.title {
   text-align: center;
   margin: 2rem;
   padding: 1rem;
+  color: #f0f0f0;
 }
 .title {
   font-size: calc(2rem + 3vw);
