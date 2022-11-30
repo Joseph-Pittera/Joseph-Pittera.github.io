@@ -10,8 +10,8 @@ button {
   color: inherit;
 }
 :root {
-  --home-light-blue: #0c1430;
-  --home-dark-blue: #070c1d;
+  --home-light-blue: #151d36;
+  --home-dark-blue: #0f1320;
   --project-light-blue: #002754;
   --project-dark-blue: #001a3d;
   --blog-light-blue: #03498a;
@@ -22,13 +22,18 @@ button {
   --old-contact-dark-yellow: #bc7000;
   --main-white: rgb(240, 240, 240);
   --main-red: rgb(97, 1, 1);
-  --light-red: #be3144;
+  --light-red: rgb(168, 38, 56);
   --main-gray: rgb(48, 45, 45);
   --light-gray: rgb(115, 110, 110);
   --dark-gray: rgb(37, 34, 34);
   --main-black: rgb(34, 31, 31);
   --height-navbar: 50px;
   --height-navbar-mobile: 50px;
+  --light-mode-one: #edede9;
+  --light-mode-two: #d6ccc2;
+  --light-mode-three: #f5ebe0;
+  --light-mode-four: #e3d5ca;
+  --light-mode-five: #d5bdaf;
 }
 body {
   min-height: 100vh;
@@ -112,12 +117,11 @@ li {
   left: 0;
   background: radial-gradient(
     circle,
-    var(--main-gray) 0%,
-    var(--main-black) 100%
-  ); /* var(--main-gray); */
+    var(--project-dark-blue) 0%,
+    var(--home-dark-blue) 100%
+  );
   opacity: 0;
   z-index: -1;
-  color: var(--main-red);
   transition: opacity 0.3s;
 }
 .dark-mode-btn {
@@ -147,17 +151,17 @@ li {
 /************ Welcome section ***************/
 .scroll-section {
   min-height: 100vh;
-  background: linear-gradient(
-    to right,
-    var(--home-light-blue),
-    var(--home-dark-blue)
-  );
   display: flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
 }
 #welcome-section {
+  background: linear-gradient(
+    to right,
+    var(--home-light-blue),
+    var(--home-dark-blue)
+  );
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -165,13 +169,13 @@ li {
   align-items: center;
 }
 
-#welcome-section > h1 {
+.ws-title {
   position: relative;
   font-size: 3.5rem;
   color: transparent;
   padding-right: 2px;
 }
-#welcome-section > h1::before {
+.ws-title-dark::before {
   content: attr(data-text); /* to not forget !!! */
   position: absolute;
   top: 0;
@@ -179,6 +183,18 @@ li {
   width: 0;
   height: 100%;
   color: var(--main-white);
+  border: none;
+  overflow: hidden;
+  animation: appear-to-right 4s linear forwards;
+}
+.ws-title-light::before {
+  content: attr(data-text); /* to not forget !!! */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: black;
   border: none;
   overflow: hidden;
   animation: appear-to-right 4s linear forwards;
@@ -288,6 +304,7 @@ li {
 .tile__title {
   font-size: 1.2rem;
   padding: 5px;
+  color: var(--main-white);
 }
 .code {
   color: var(--main-black);
