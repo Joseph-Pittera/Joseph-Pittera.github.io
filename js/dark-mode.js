@@ -22,9 +22,7 @@ export const darkMode = {
         projectSection.style.background = "var(--light-mode-two)";
         blogSection.style.background = "var(--light-mode-three)";
         contactSection.style.background = "var(--light-mode-four)";
-        // darkBtn.style.background = "var(--light-mode-five)";
         navbar.style.background = "var(--light-mode-five)";
-        // debugger;
         navbarLinks.forEach((x) =>
           x.classList.replace("link-dark", "link-light")
         );
@@ -42,7 +40,6 @@ export const darkMode = {
           "linear-gradient(  to right, var(--blog-light-blue), var(--blog-dark-blue))";
         contactSection.style.background =
           "linear-gradient( to right, var(--contact-light-blue),var(--contact-dark-blue))";
-        // darkBtn.style.background = "var(--main-red)";
         navbar.style.background = "var(--main-red)";
         navbarLinks.forEach((x) =>
           x.classList.replace("link-light", "link-dark")
@@ -56,14 +53,4 @@ export const darkMode = {
       window.focus;
     });
   },
-
-  //   /**
-  //    *
-  //    * @param {HTMLElement} icon
-  //    */
-  //   switchDarkIcon(icon) {
-  //     icon.classList.contains("fa-sun")
-  //       ? icon.classList.replace("fa-sun", "fa-moon")
-  //       : icon.classList.replace("fa-moon", "fa-sun");
-  //   },
 };
