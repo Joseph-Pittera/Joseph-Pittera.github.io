@@ -9,6 +9,14 @@ a,
 button {
   color: inherit;
 }
+/* remove the blue highlight on clic on mobile */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 :root {
   --home-light-blue: #101a39;
   --home-dark-blue: #03091c;
