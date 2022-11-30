@@ -169,7 +169,6 @@ li {
   position: relative;
   font-size: 3.5rem;
   color: transparent;
-  /* -webkit-text-stroke: 0vw var(--main-white); */
   padding-right: 2px;
 }
 #welcome-section > h1::before {
@@ -180,7 +179,6 @@ li {
   width: 0;
   height: 100%;
   color: var(--main-white);
-  /* -webkit-text-stroke: 0vw var(--main-white); */
   border: none;
   overflow: hidden;
   animation: appear-to-right 4s linear forwards;
@@ -272,9 +270,6 @@ li {
   align-items: center;
   margin: 1rem;
 }
-.projects__flexbox a {
-  color: var(--main-white);
-}
 .project__tile {
   background-color: var(--main-black);
   border-radius: 5px;
@@ -320,7 +315,6 @@ li {
 }
 #blog h1,
 #blog h2 {
-  color: var(--main-white);
   text-align: center;
   margin: 1rem;
 }
@@ -332,7 +326,6 @@ li {
   font-family: Lato, sans-serif;
 }
 .blog__subtitle {
-  color: var(--main-white);
   font-size: calc(1rem + 1.8vw);
   font-family: Raleway, sans-serif;
 }
@@ -386,9 +379,6 @@ li {
   justify-content: center;
   flex-direction: row;
 }
-.contact-links a {
-  color: var(--main-white);
-}
 .contact-details {
   font-size: 1.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
@@ -418,7 +408,6 @@ footer {
   height: 50px;
   width: 100%;
   font-size: 0.9rem;
-  color: var(--main-white);
 }
 
 /* media queries */
