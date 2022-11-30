@@ -128,7 +128,7 @@ li {
   width: 20px;
   height: 20px;
   margin: auto 1rem;
-  background-color: var(--main-red);
+  background-color: transparent;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -143,8 +143,7 @@ li {
     color: var(--light-red);
   }
   .dark-mode-btn:hover {
-    color: var(--home-dark-blue);
-    scale: 1.5;
+    scale: 1.6;
   }
 }
 

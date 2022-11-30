@@ -11,7 +11,6 @@ export const darkMode = {
     const contactDetails = document.querySelectorAll(".contact-details");
     const footer = document.querySelector("footer");
     const navbar = document.querySelector("#navbar");
-    const color = "Thistle";
 
     darkBtn.addEventListener("click", () => {
       if (darkIcon.classList.contains("fa-sun")) {
@@ -22,7 +21,7 @@ export const darkMode = {
         projectSection.style.background = "var(--light-mode-two)";
         blogSection.style.background = "var(--light-mode-three)";
         contactSection.style.background = "var(--light-mode-four)";
-        darkBtn.style.background = "var(--light-mode-five)";
+        // darkBtn.style.background = "var(--light-mode-five)";
         navbar.style.background = "var(--light-mode-five)";
         footer.style.background = "var(--light-mode-five)";
         contactDetails.forEach((x) => (x.style.textShadow = "none"));
@@ -38,7 +37,7 @@ export const darkMode = {
           "linear-gradient(  to right, var(--blog-light-blue), var(--blog-dark-blue))";
         contactSection.style.background =
           "linear-gradient( to right, var(--contact-light-blue),var(--contact-dark-blue))";
-        darkBtn.style.background = "var(--main-red)";
+        // darkBtn.style.background = "var(--main-red)";
         navbar.style.background = "var(--main-red)";
         footer.style.background =
           "linear-gradient(  to right, var(--home-light-blue), var(--home-dark-blue)  )";
@@ -46,7 +45,6 @@ export const darkMode = {
           (x) => (x.style.textShadow = "2px 2px 1px #1f1f1f")
         );
       }
-      debugger;
       window.focus;
     });
   },
