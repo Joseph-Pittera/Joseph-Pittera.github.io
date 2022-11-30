@@ -289,8 +289,8 @@ li {
 .project__tile {
   background-color: var(--main-black);
   border-radius: 5px;
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   margin: 1rem;
   box-shadow: 0 0 45px rgb(0 0 0 / 50%);
   transition: transform 0.2s ease-in-out;
