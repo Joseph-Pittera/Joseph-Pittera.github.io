@@ -88,12 +88,34 @@ const app = {
     }
   },
 
+  sizeOfGridCheck() {
+    if (window.matchMedia("(min-width: 800px)").matches) {
+      if (app.gridSizeInput.value > 32) {
+        alert(`La dimension ne doit pas dépasser ${this.maxGridSize}`);
+        return true;
+      } else if (app.pixelSizeInput.value > 32) {
+        alert(`La dimension ne doit pas dépasser ${this.maxPixelSize}`);
+        return true;
+      }
+    } else {
+      if (app.gridSizeInput.value > 20) {
+        alert(`La dimension ne doit pas dépasser 20`);
+        return true;
+      } else if (app.pixelSizeInput.value > 20) {
+        alert(`La dimension ne doit pas dépasser 20`);
+        return true;
+      }
+    }
+  },
+
   /**
    * disable the "Valider" button if no data in inputs
    */
   validButtonEnablingCheck() {
     app.validButton.disabled =
-      app.gridSizeInput.value === "" || app.pixelSizeInput.value === "";
+      app.sizeOfGridCheck() ||
+      app.gridSizeInput.value === "" ||
+      app.pixelSizeInput.value === "";
   },
 
   /**
