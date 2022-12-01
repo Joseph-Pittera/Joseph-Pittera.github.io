@@ -1,7 +1,15 @@
+:root {
+  --contact-light-blue: #1282a2;
+  --contact-dark-blue: #0e6b85;
+}
 body {
   min-height: 100vh;
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #01519c, #003d75);
+  background: linear-gradient(
+    to right,
+    var(--contact-light-blue),
+    var(--contact-dark-blue)
+  );
   padding: clamp(20px, 5vw, 50px) 10px 10px;
 }
 body::-webkit-scrollbar {

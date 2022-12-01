@@ -5,19 +5,25 @@
   margin: 0;
   padding: 0;
 }
-
+:root {
+  --project-light-blue: #001f54;
+  --project-dark-blue: #001842;
+}
 body {
   min-height: 100vh;
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #283348, #010c20);
+  background: linear-gradient(
+    to right,
+    var(--project-light-blue),
+    var(--project-dark-blue)
+  );
   overflow: overlay; /* make the background of the scrollball "transparent */
-
 }
 
 body::-webkit-scrollbar {
-  width: 10px; /* width of the entire scrollbar */ 
+  width: 10px; /* width of the entire scrollbar */
   /* background-color: #aaa; */
-  /* display: none; --> to hide the scrollbar*/ 
+  /* display: none; --> to hide the scrollbar*/
 }
 
 body::-webkit-scrollbar-thumb {
@@ -32,13 +38,18 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background: linear-gradient(to right, #283348, #010c20);
+  background: linear-gradient(
+    to right,
+    var(--project-light-blue),
+    var(--project-dark-blue)
+  );
   margin-top: 0;
   padding: 2rem 0 1rem 0;
 }
 
-header > h1, header > p {
-  color: rgb(243, 237, 237);
+header > h1,
+header > p {
+  color: #c9c9c9;
   text-align: center;
 }
 
