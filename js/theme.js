@@ -3,7 +3,6 @@ export const theme = {
    * handle the dark/light mode
    */
   init() {
-    debugger;
     theme.darkBtn.addEventListener("click", () => {
       theme.switchTheme();
       window.focus;
