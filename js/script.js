@@ -1,5 +1,5 @@
 import { navbar } from "./navbar.js";
-import { darkMode } from "./dark-mode.js";
+import { theme } from "./theme.js";
 
 const script = {
   init() {
@@ -7,7 +7,7 @@ const script = {
     navbar.init();
 
     // Gestion du dark-mode
-    darkMode.init();
+    theme.init();
   },
 };
 
