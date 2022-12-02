@@ -305,10 +305,11 @@ li {
   border-bottom: solid 1px;
   line-height: 1.5;
   max-width: 544px;
-  margin: 4rem auto 0 auto;
+  margin: 4rem auto 1rem auto;
 }
 .projects__flexbox {
   flex-grow: 1;
+  gap: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -341,8 +342,8 @@ li {
 }
 @media (hover: hover) {
   .project__tile:hover {
-    box-shadow: 0 0 45px rgba(90, 59, 6, 0.6);
-    transform: scale(1.1);
+    box-shadow: 0 0 35px 0px var(--main-red);
+    transform: scale(1.05);
   }
   .project__tile:hover .code {
     color: var(--light-red);
