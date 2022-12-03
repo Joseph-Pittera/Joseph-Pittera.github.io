@@ -53,21 +53,22 @@
   width: 35%;
   max-width: 15rem;
 }
+.pair-prog-img {
+  max-width: 20rem;
+}
 .guess-number,
-.dice-game {
+.dice-game,
+.pixel-art {
   display: block;
   margin: 0 auto 2rem auto;
   width: 50%;
   border-radius: 0.5rem;
+  animation: shadow 1s alternate infinite;
 }
-.pixel-art {
-  display: block;
-  margin: 0 auto 2rem auto;
-  width: 30%;
-  border-radius: 0.5rem;
-}
-.pair-prog-img {
-  max-width: 20rem;
+@keyframes shadow {
+  100% {
+    box-shadow: black 0px 0px 6px -2px;
+  }
 }
 .left {
   float: left;
