@@ -18,10 +18,24 @@ export const theme = {
    * handle the dark/light mode
    */
   init() {
+    if (theme.themePreference() === "light") {
+      theme.switchToLightMode();
+    }
     theme.darkBtn.addEventListener("click", () => {
       theme.switchTheme();
       window.focus;
     });
+  },
+
+  /**
+   * get the prefered theme stored in local storage or return dark by default
+   * @returns {string} "dark" or "light"
+   */
+  themePreference() {
+    if (localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return "dark";
   },
 
   /**
@@ -66,6 +80,7 @@ export const theme = {
     theme.article.forEach((x) =>
       x.classList.replace("light-shadow", "dark-shadow")
     );
+    localStorage.setItem("theme", "dark");
   },
 
   /**
@@ -88,5 +103,6 @@ export const theme = {
     theme.article.forEach((x) =>
       x.classList.replace("dark-shadow", "light-shadow")
     );
+    localStorage.setItem("theme", "light");
   },
 };
