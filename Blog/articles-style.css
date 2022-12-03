@@ -67,7 +67,7 @@
 }
 @keyframes shadow {
   100% {
-    box-shadow: black 0px 0px 6px -2px;
+    box-shadow: rgb(0, 0, 0, 0.5) 0px 0px 6px 0px;
   }
 }
 .left {
@@ -105,5 +105,10 @@
     color: black;
     height: auto;
     margin: 1rem 0 4rem;
+  }
+  .guess-number,
+  .dice-game,
+  .pixel-art {
+    width: 70%;
   }
 }
