@@ -3,16 +3,17 @@ export const theme = {
   darkBtn: document.querySelector(".dark-mode-btn"),
   darkIcon: document.querySelector(".dark-mode-btn").firstElementChild,
   bodyElt: document.querySelector("body"),
+  navbar: document.querySelector("#navbar"),
   wsTitle: document.querySelector(".ws-title"),
   welcomeSection: document.querySelector("#welcome-section"),
   projectSection: document.querySelector("#projects"),
+  projectTiles: document.querySelectorAll(".project__tile"),
+  article: document.querySelectorAll(".article"),
   blogSection: document.querySelector("#blog"),
   contactSection: document.querySelector("#contact"),
   contactDetails: document.querySelectorAll(".contact-details"),
   footer: document.querySelector("footer"),
-  navbar: document.querySelector("#navbar"),
   navbarLinks: document.querySelectorAll(".link-dark"),
-  article: document.querySelectorAll(".article"),
 
   /**
    * handle the dark/light mode
@@ -63,22 +64,28 @@ export const theme = {
     theme.welcomeSection.style.background =
       "linear-gradient(to right, var(--home-light-blue), var(--home-dark-blue))";
     theme.projectSection.style.background =
-      "linear-gradient( to right, var(--project-light-blue), var(--project-dark-blue) )";
+      "linear-gradient(to right, var(--project-light-blue), var(--project-dark-blue) )";
     theme.blogSection.style.background =
-      "linear-gradient(  to right, var(--blog-light-blue), var(--blog-dark-blue))";
+      "linear-gradient(to right, var(--blog-light-blue), var(--blog-dark-blue))";
     theme.contactSection.style.background =
-      "linear-gradient( to right, var(--contact-light-blue),var(--contact-dark-blue))";
+      "linear-gradient(to right, var(--contact-light-blue),var(--contact-dark-blue))";
     theme.navbar.style.background = "var(--main-red)";
     theme.navbarLinks.forEach((x) =>
       x.classList.replace("link-light", "link-dark")
     );
     theme.footer.style.background =
-      "linear-gradient(  to right, var(--home-light-blue), var(--home-dark-blue)  )";
+      "linear-gradient(to right, var(--home-light-blue), var(--home-dark-blue)  )";
     theme.contactDetails.forEach(
       (x) => (x.style.textShadow = "2px 2px 1px #1f1f1f")
     );
     theme.article.forEach((x) =>
-      x.classList.replace("light-shadow", "dark-shadow")
+      x.classList.replace("article--light-shadow", "article--dark-shadow")
+    );
+    theme.projectTiles.forEach((x) =>
+      x.classList.replace(
+        "project__tile--light-shadow",
+        "project__tile--dark-shadow"
+      )
     );
     localStorage.setItem("theme", "dark");
   },
@@ -101,7 +108,13 @@ export const theme = {
     theme.footer.style.background = "var(--light-mode-five)";
     theme.contactDetails.forEach((x) => (x.style.textShadow = "none"));
     theme.article.forEach((x) =>
-      x.classList.replace("dark-shadow", "light-shadow")
+      x.classList.replace("article--dark-shadow", "article--light-shadow")
+    );
+    theme.projectTiles.forEach((x) =>
+      x.classList.replace(
+        "project__tile--dark-shadow",
+        "project__tile--light-shadow"
+      )
     );
     localStorage.setItem("theme", "light");
   },

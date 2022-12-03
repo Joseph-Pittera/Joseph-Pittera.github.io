@@ -342,11 +342,16 @@ li {
 }
 @media (hover: hover) {
   .project__tile:hover {
-    box-shadow: 0 0 35px 0px var(--main-red);
     transform: scale(1.05);
   }
   .project__tile:hover .code {
     color: var(--light-red);
+  }
+  .project__tile--dark-shadow:hover {
+    box-shadow: 0 0 35px 0px var(--main-red);
+  }
+  .project__tile--light-shadow:hover {
+    box-shadow: 0 0 35px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -391,10 +396,10 @@ li {
   border-radius: 0.5rem;
   background-color: var(--main-white);
 }
-.dark-shadow {
+.article--dark-shadow {
   animation: darkShadow 1s infinite alternate;
 }
-.light-shadow {
+.article--light-shadow {
   animation: lightShadow 1s infinite alternate;
 }
 @keyframes darkShadow {
