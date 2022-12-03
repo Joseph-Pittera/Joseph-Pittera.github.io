@@ -1,6 +1,7 @@
 :root {
   --contact-light-blue: #1282a2;
   --contact-dark-blue: #0e6b85;
+  --main-white: #fafafa;
 }
 body {
   min-height: 100vh;
@@ -14,7 +15,7 @@ body {
 }
 body::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
-  background-color: #003d75;
+  background-color: var(--contact-dark-blue);
   /* display: none; --> to hide the scrollbar*/
 }
 body::-webkit-scrollbar-thumb {
@@ -31,7 +32,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   margin: 2rem;
   padding: 1rem;
-  color: #f0f0f0;
+  color: var(--main-white);
 }
 .title {
   font-size: calc(2rem + 3vw);
@@ -51,7 +52,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0.5rem;
   padding: 0 0.5rem;
   border-radius: 0.5rem;
-  background-color: #fafafa;
+  background-color: var(--main-white);
 }
 .article__title {
   padding: 2rem 2rem 1rem;
