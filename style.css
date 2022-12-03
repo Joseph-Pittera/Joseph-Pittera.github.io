@@ -394,10 +394,10 @@ li {
 }
 @keyframes shadow {
   0% {
-    box-shadow: var(--main-red) 0px 0px 1px 1px;
+    box-shadow: var(--contact-light-blue) 0px 0px 1px 1px;
   }
   100% {
-    box-shadow: var(--main-red) 0px 0px 10px 1px;
+    box-shadow: var(--contact-light-blue) 0px 0px 12px 2px;
   }
 }
 .article__title {
