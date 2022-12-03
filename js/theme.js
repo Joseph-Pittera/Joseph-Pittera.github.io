@@ -1,15 +1,5 @@
 export const theme = {
-  /**
-   * handle the dark/light mode
-   */
-  init() {
-    theme.darkBtn.addEventListener("click", () => {
-      theme.switchTheme();
-      window.focus;
-    });
-  },
-
-  // initialize the variables that contain the HTML element to modify when switching theme
+  // initialize the variables that contain the HTML elements to modify when switching theme
   darkBtn: document.querySelector(".dark-mode-btn"),
   darkIcon: document.querySelector(".dark-mode-btn").firstElementChild,
   bodyElt: document.querySelector("body"),
@@ -22,6 +12,17 @@ export const theme = {
   footer: document.querySelector("footer"),
   navbar: document.querySelector("#navbar"),
   navbarLinks: document.querySelectorAll(".link-dark"),
+  article: document.querySelectorAll(".article"),
+
+  /**
+   * handle the dark/light mode
+   */
+  init() {
+    theme.darkBtn.addEventListener("click", () => {
+      theme.switchTheme();
+      window.focus;
+    });
+  },
 
   /**
    * handle the switch to dark or light mode
@@ -62,6 +63,9 @@ export const theme = {
     theme.contactDetails.forEach(
       (x) => (x.style.textShadow = "2px 2px 1px #1f1f1f")
     );
+    theme.article.forEach((x) =>
+      x.classList.replace("light-shadow", "dark-shadow")
+    );
   },
 
   /**
@@ -81,5 +85,8 @@ export const theme = {
     );
     theme.footer.style.background = "var(--light-mode-five)";
     theme.contactDetails.forEach((x) => (x.style.textShadow = "none"));
+    theme.article.forEach((x) =>
+      x.classList.replace("dark-shadow", "light-shadow")
+    );
   },
 };

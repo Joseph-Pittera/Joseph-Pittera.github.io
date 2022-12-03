@@ -390,14 +390,27 @@ li {
   margin: 0.5rem;
   border-radius: 0.5rem;
   background-color: var(--main-white);
-  animation: shadow 1s infinite alternate;
 }
-@keyframes shadow {
+.dark-shadow {
+  animation: darkShadow 1s infinite alternate;
+}
+.light-shadow {
+  animation: lightShadow 1s infinite alternate;
+}
+@keyframes darkShadow {
   0% {
     box-shadow: var(--contact-light-blue) 0px 0px 1px 1px;
   }
   100% {
     box-shadow: var(--contact-light-blue) 0px 0px 12px 2px;
+  }
+}
+@keyframes lightShadow {
+  0% {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 6px 1px;
   }
 }
 .article__title {
