@@ -8,15 +8,24 @@
 :root {
   --project-light-blue: #001f54;
   --project-dark-blue: #001842;
+  --light-mode-two: #d6ccc2;
+  --main-white: #fafafa;
 }
-body {
-  min-height: 100vh;
-  font-family: Lato, Helvetica, sans-serif;
+.light-bg {
+  background: var(--light-mode-two);
+  color: black;
+}
+.dark-bg {
   background: linear-gradient(
     to right,
     var(--project-light-blue),
     var(--project-dark-blue)
   );
+  color: var(--main-white);
+}
+body {
+  min-height: 100vh;
+  font-family: Lato, Helvetica, sans-serif;
   overflow: overlay; /* make the background of the scrollball "transparent */
 }
 
@@ -38,18 +47,12 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    var(--project-light-blue),
-    var(--project-dark-blue)
-  );
   margin-top: 0;
   padding: 2rem 0 1rem 0;
 }
 
 header > h1,
 header > p {
-  color: #c9c9c9;
   text-align: center;
 }
 
@@ -82,9 +85,6 @@ header > p {
     transform: translateX(0px);
   }
 }
-.fa-arrow-left {
-  color: rgb(243, 237, 237);
-}
 
 .project-wall {
   display: flex;
@@ -92,9 +92,6 @@ header > p {
   justify-content: center;
   padding-top: 190px;
 }
-/* .invisible {
-  visibility: hidden;
-} */
 .project {
   width: 300px;
   height: 300px;

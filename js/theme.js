@@ -1,5 +1,6 @@
 export const theme = {
   // initialize the variables that contain the HTML elements to modify when switching theme
+  // on the main page
   darkBtn: document.querySelector(".dark-mode-btn"),
   darkIcon: document.querySelector(".dark-mode-btn").firstElementChild,
   bodyElt: document.querySelector("body"),
@@ -14,6 +15,11 @@ export const theme = {
   contactDetails: document.querySelectorAll(".contact-details"),
   footer: document.querySelector("footer"),
   navbarLinks: document.querySelectorAll(".link-dark"),
+  // on the freecodecamp page
+
+  // on the O'Clock page
+
+  // on the Ecole du Web page
 
   /**
    * handle the dark/light mode
@@ -33,10 +39,10 @@ export const theme = {
    * @returns {string} "dark" or "light"
    */
   themePreference() {
-    if (localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    return "dark";
+    localStorage.getItem("theme")
+      ? (theme.preferedTheme = localStorage.getItem("theme"))
+      : (theme.preferedTheme = "dark");
+    return theme.preferedTheme;
   },
 
   /**
