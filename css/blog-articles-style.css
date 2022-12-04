@@ -1,13 +1,71 @@
 :root {
+  --contact-light-blue: #1282a2;
+  --contact-dark-blue: #0e6b85;
   --main-white: #fafafa;
 }
+body {
+  min-height: 100vh;
+  font-family: Lato, Helvetica, sans-serif;
+  background: linear-gradient(
+    to right,
+    var(--contact-light-blue),
+    var(--contact-dark-blue)
+  );
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+  background-color: var(--contact-dark-blue);
+  /* display: none; --> to hide the scrollbar*/
+}
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+.bold {
+  font-weight: 500;
+}
+.underlined {
+  text-decoration: underline;
+}
+.title {
+  text-align: center;
+  margin: 2rem;
+  padding: 1rem;
+  color: var(--main-white);
+}
+.title {
+  font-size: calc(2rem + 3vw);
+  font-family: Lato, sans-serif;
+}
+.subtitle {
+  font-size: 4rem;
+  font-family: Raleway, sans-serif;
+}
 .articles-section {
+  display: flex;
+  flex-direction: column;
   margin: 6rem auto;
+  width: 80%;
   max-width: 102.4rem;
+}
+.article {
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--main-white);
 }
 .article__title {
   font-size: 3rem;
   margin: 2rem 0 4rem;
+  padding: 2rem 2rem 1rem;
+}
+.article__description {
+  padding: 0 2rem 3rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
 }
 .supply-chain-img,
 .boat-img {
@@ -27,7 +85,7 @@
   width: 35%;
   max-width: 25rem;
 }
-.bg {
+.bg-title-img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,10 +98,10 @@
   text-align: center;
 }
 .olduvai-bg {
-  background-image: url(./S01/assets/grotte-vue-sur-mer.jpg);
+  background-image: url(../subpages/Blog/S01/assets/grotte-vue-sur-mer.jpg);
 }
 .code-bg {
-  background-image: url(./S02/assets/code.jpg);
+  background-image: url(../subpages/Blog/S02/assets/code.jpg);
 }
 .linux-ico,
 .HTML-CSS-logos,
