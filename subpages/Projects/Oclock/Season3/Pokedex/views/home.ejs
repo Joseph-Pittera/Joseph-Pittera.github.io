@@ -1,0 +1,15 @@
+<%- include('./partials/header-search') %>
+
+<div class="cards">
+
+    <% for( pokemon of locals.displayedPokemons ) { %>
+        <a href="/details/<%= pokemon.nom %>"><figure class="card">
+            <img src="/img/<%= pokemon.numero %>.png" alt="<%= pokemon.nom %>">
+            <figcaption>#<%= pokemon.numero %> <%= pokemon.nom %></figcaption>
+        </figure>
+    </a>
+    <% } %>
+    
+</div>
+
+<%- include('./partials/footer') %>

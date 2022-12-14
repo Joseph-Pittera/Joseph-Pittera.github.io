@@ -1,0 +1,20 @@
+
+    {
+    "Acier":"#aaaabb",
+    "Combat":"#bb5544",
+    "Dragon":"#7766ee",
+    "Eau":"#3399ff",
+    "Électrik":"#ffbb33",
+    "Feu":"#ff4422",
+    "Glace":"#77ddff",
+    "Insecte":"#aabb22",
+    "Normal":"#bbaabb",
+    "Plante":"#77cc55",
+    "Poison":"#aa5599",
+    "Psy":"#ff5599",
+    "Roche":"#bbaa66",
+    "Sol":"#ddbb55",
+    "Spectre":"#6666bb",
+    "Ténèbres":"#665544",
+    "Vol":"#6699ff"
+    }

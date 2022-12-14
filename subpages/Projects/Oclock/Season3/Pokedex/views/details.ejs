@@ -1,0 +1,38 @@
+<%- include('./partials/header') %>
+
+<h2>Détails de <%= locals.pokemon.nom %></h2>
+<div class="pokemon-card">
+    <img src="/img/<%= pokemon.numero %>.png" alt="<%= pokemon.nom %>">
+    <div class="detailed-card">
+        <h3>#<%= locals.pokemon.numero %> <%= locals.pokemon.nom %></h3>
+        <div class="types">
+
+            <% for( const type of locals.pokemon.type ) { %>
+                <a 
+                    class="<%= type %> details-type" 
+                    href="/types/<%= type %>" 
+                    style="width: 4rem; background-color:<%= locals.pokemonTypes[type] %>">
+                    <%= type %>
+                </a>
+            <% } %>
+
+        </div>
+        <h4>Statistiques</h4>
+        <div class="statistiques">
+
+            <% for( stat in stats ) { %>
+                <div class="stat">
+                    <div><%= stats[stat] %></div>
+                    <div><%= locals.pokemon[stat] %> </div>
+                    <div class="progressbar-wrapper">
+                        <div class="progressbar" style="height: 21px;width:<%= locals.pokemon[stat] / 255 *100 %>%"></div>
+                    </div>
+                </div>
+            <% } %>
+            
+        </div>
+    </div>
+</div>
+<a class="backHome" href="/">Revenir à la liste</a>
+
+<%- include('./partials/footer') %>

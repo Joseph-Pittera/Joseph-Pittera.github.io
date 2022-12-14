@@ -1,0 +1,20 @@
+<%- include('./partials/header') %>
+
+<div class="global">
+    <div class="pres">Cliquez sur un type pour voir tous les Pokemon de ce type</div>
+    <div class="all-types">
+
+        <% for( type in locals.pokemonTypes ) { %>
+            <a 
+                class="<%= type %> types-type" 
+                href="/types/<%= type %>" 
+                style="background-color:<%= locals.pokemonTypes[type] %>">
+                <%= type %>
+            </a>
+        <% } %>
+
+    </div>
+</div>
+<a class="backHome" href="/">Revenir à la liste</a>
+
+<%- include('./partials/footer') %>
