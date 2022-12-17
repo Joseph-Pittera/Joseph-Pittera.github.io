@@ -35,6 +35,14 @@ body::-webkit-scrollbar-thumb {
 .underlined {
   text-decoration: underline;
 }
+.arrow {
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  animation: 2s linear infinite horizontal-move;
+}
 .title {
   text-align: center;
   margin: 2rem;
@@ -109,6 +117,9 @@ body::-webkit-scrollbar-thumb {
 }
 .code-bg {
   background-image: url(../subpages/Blog/S02/assets/code.jpg);
+}
+.server-bg {
+  background-image: url(../subpages/Blog/S03/assets/server.jpg);
 }
 .linux-ico,
 .HTML-CSS-logos,
