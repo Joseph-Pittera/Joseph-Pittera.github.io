@@ -7,14 +7,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+    <link rel="stylesheet" href="../../../css/blog-articles-style.css" />
+    <script type="module" src="../../../js/blog-theme.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f688d1844f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Season 5</title>
   </head>
-  <body>
-    <div></div>
+  <body class="dark-bg">
+    <div class="arrow">
+      <a href="../../../index.html#blog" target="_self">
+        <i class="fa-solid fa-arrow-left bg"></i>
+      </a>
+    </div>
+    <h1 class="title bold">Saison 5 - Architecture</h1>
+    <section class="articles-section">
+      <article class="article">
+        <h3 class="article__title bold buildings-bg bg-title-img">OLDUVAÏ</h3>
+
+        <p class="article__description">
+          Saison 5 : architecture 🏗️<br />
+          Après une saison 4 très intense, la saison 5 va être constituée de
+          beaucoup de rappels, ce qui va nous permettre de digérer un peu tout
+          ce que nous avons vu. Et nous allons creuser et approfondir certaines
+          notions.
+        </p>
+
+        <p class="article__description">
+          On démarre par les MCD (Modèle Conceptuel de Données) et MLD (Modèle
+          Logique de Données), qui permettent de créer et mettre en place une
+          base de donnée à partir de rien, avec la bonne architecture.
+        </p>
+        <p class="article__description">
+          On découvre la POO (Programmation Orientée Objet), avec la notion de
+          classes, et d'héritage. C'est une façon de coder très "à la mode"
+          qu'il faut maitriser, elle permet d'avoir des objets très modulables
+          et adaptables, augmentant la flexibilité et l'évolutivité du code.
+          C'est essentiel actuellement avec la dynamisation des sites web et
+          l'amélioration des UX (expérience utilisateur).
+        </p>
+        <p class="article__description">
+          Niveau base de données, nous découvrons les Active Records et ORM
+          (Object Relational Mapping) qui respectent le modèle de POO en créant
+          des classes/objects pour gérer les requêtes SQL, ce qui simplifie le
+          rendu des pages Web. <br />
+          Personnellement pas très fan de cette solution, que je ne trouve pas
+          intuitive. Surtout que pour des applications complexes, cela entraine
+          une perte de performance dans la communication avec les BDD (bases de
+          données).
+        </p>
+        <p class="article__description">
+          La partie authentification est approfondie, avec une ouverture sur la
+          sécurité et le profil ADMIN.
+        </p>
+        <p class="article__description">
+          Ensuite nous avons une journée très importante sur l'utilisation de
+          Git qui permet de versionner notre code. On découvre son utilisation
+          lors de travail en équipe, comment gérer les conflits de version et la
+          gestion des différentes branches entre développeurs.
+        </p>
+        <p>
+          Le challenge de fin de saison est très intéressant. Etant assez fan de
+          POO, je me fixe le défi de réaliser ce challenge en utilisant un
+          maximum les Class et transformer les routers et les controllers sous
+          forme d'objets. C'est un bon moyen d'approfondir cette notion.
+        </p>
+      </article>
+    </section>
   </body>
 </html>

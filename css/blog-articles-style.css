@@ -121,6 +121,9 @@ body::-webkit-scrollbar-thumb {
 .server-bg {
   background-image: url(../subpages/Blog/S03/assets/server.jpg);
 }
+.buildings-bg {
+  background-image: url(../subpages/Blog/S05/assets/building_bg.jpg);
+}
 .linux-ico,
 .HTML-CSS-logos,
 .pair-prog-img {

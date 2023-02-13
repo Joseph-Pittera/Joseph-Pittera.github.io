@@ -7,14 +7,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../../css/reset.css" />
+    <link rel="stylesheet" href="../../../css/blog-articles-style.css" />
+    <script type="module" src="../../../js/blog-theme.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f688d1844f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Season 4</title>
   </head>
-  <body>
-    <div></div>
+  <body class="dark-bg">
+    <div class="arrow">
+      <a href="../../../index.html#blog" target="_self">
+        <i class="fa-solid fa-arrow-left bg"></i>
+      </a>
+    </div>
+    <h1 class="title bold">Saison 4 - Data</h1>
+    <section class="articles-section">
+      <article class="article">
+        <h3 class="article__title bold server-bg bg-title-img">OLDUVAÏ</h3>
+
+        <p class="article__description">
+          Saison 4 : approfondissement des notions de backend ! <br />
+          Cette saison va être intense, avec enormément de nouvelles notions. On
+          commence par le côté utilisateur, les User Story, qui font partie des
+          méthodes agiles (objectifs à court terme donnat des résultats concrets
+          rapides). Les user story visent à s'assurer que l'on délivre les
+          bonnes fonctionnalités aux utilisateurs.
+        </p>
+
+        <p />
+        <p class="article__description">
+          On met ensuite en place des controllers, qui respectent le SoC
+          (séparation des concepts) et d'avoir un code plus lisible, mieux
+          organisé. Les routers qui gèrent la partie du code qui gérant les
+          pages affichées en fonction des URL ne font plus que ça, et les
+          controllers gèrent le code lié à cette URL.
+        </p>
+        <p class="article__description">
+          On "découvre" ensuite le langage SQL, qui permet de communiquer avec
+          les bases de données et d'en extraire les informations souhaitées.
+          Ayant travaillé plusieurs années sur Access, je me remets vite dans le
+          bain sur ce langage que j'aime bien.
+        </p>
+        <p class="article__description">
+          On met aussi en place des DataMapper qui gèrent la requêtes SQL vers
+          les bases de données. Les DataMapper permettent aussi de suivre le
+          SoC, et de ne laisser dans les controller que le code gérant la page.
+          Les requêtes SQL et leur gestion seront donc séparées dans les méthode
+          du DataMapper. Les "promesses", encore une nouvelle notion, permettent
+          d'attendre le retour/la réponse de cette requête SQL avant d'exécuter
+          la suite du code.
+        </p>
+        <img
+          src="../../Blog/S04/assets/Routers.PNG"
+          alt="screenshot routers"
+          class="guess-number"
+        />
+        <p class="article__description">
+          Nous découvrons aussi les Cookies et la gestion des sessions
+          utilisateurs, notion très importante pour garder en mémoire les
+          préférences des utilisateurs, les paniers sur les site d'e-commerce
+          etc...
+        </p>
+        <p class="article__description">
+          C'est une saison très intense intellectuellement, assez fatiguante.
+          J'ai du m'employer à fond mais le parcours de fin de saison se passe
+          finalement très bien.
+        </p>
+      </article>
+    </section>
   </body>
 </html>
