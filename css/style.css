@@ -17,15 +17,16 @@ select,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 :root {
-  --home-light-blue: #0a1128;
+  --home-light-blue: #0d1723;
   --home-dark-blue: #060916;
-  --project-light-blue: #001f54;
-  --project-dark-blue: #001842;
-  --blog-light-blue: #034078;
-  --blog-dark-blue: #013464;
-  --contact-light-blue: #1282a2;
-  --contact-dark-blue: #0e6b85;
+  --project-light-blue: #0d2130;
+  --project-dark-blue: #0d1723;
+  --blog-light-blue: #092c3c;
+  --blog-dark-blue: #0d2130;
+  --contact-light-blue: #003847;
+  --contact-dark-blue: #092c3c;
   /* --home-light-blue: #101a39;
   --home-dark-blue: #03091c;
   --project-light-blue: #012d5f;
